@@ -1,0 +1,65 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 24,
+  "boxShadow": "none",
+  "defaultOptionValue": "{{ ((options, serverSideFiltering) => ( \nappsmith.store.modoPA === \"MODIFICAR\"\n  ? appsmith.store.encabezadoPA?.id_tipo_retencion_dgii\n  : \"\"\n))(selTipoRetDGII_PA.options, selTipoRetDGII_PA.serverSideFiltering) }}",
+  "dynamicBindingPathList": [
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "sourceData"
+    },
+    {
+      "key": "defaultOptionValue"
+    }
+  ],
+  "dynamicHeight": "FIXED",
+  "dynamicPropertyPathList": [
+    {
+      "key": "sourceData"
+    }
+  ],
+  "dynamicTriggerPathList": [],
+  "isDisabled": false,
+  "isFilterable": true,
+  "isLoading": false,
+  "isRequired": false,
+  "isVisible": true,
+  "key": "3g5yh8ry2q",
+  "labelAlignment": "left",
+  "labelPosition": "Top",
+  "labelText": "Tipo de retención DGII",
+  "labelTextSize": "0.875rem",
+  "labelWidth": 5,
+  "leftColumn": 34,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "minWidth": 450,
+  "mobileBottomRow": 22,
+  "mobileLeftColumn": 31,
+  "mobileRightColumn": 51,
+  "mobileTopRow": 15,
+  "needsErrorInfo": false,
+  "optionLabel": "nombre",
+  "optionValue": "id_tipo_retencion",
+  "parentColumnSpace": 19.3125,
+  "parentId": "1rx35z98hu",
+  "parentRowSpace": 10,
+  "placeholderText": "Sin retención DGII",
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 44,
+  "serverSideFiltering": false,
+  "sourceData": "{{\n[\n  {\n    id_tipo_retencion: null,\n    nombre: \"Sin retención DGII\"\n  },\n  ...qryTipoRetencionDGII.data\n]\n}}",
+  "topRow": 17,
+  "type": "SELECT_WIDGET",
+  "version": 1,
+  "widgetId": "9zdggal505",
+  "widgetName": "selTipoRetDGII_PA"
+}

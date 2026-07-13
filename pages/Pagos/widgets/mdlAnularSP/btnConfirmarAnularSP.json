@@ -1,0 +1,51 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 22,
+  "boxShadow": "none",
+  "buttonColor": "#ef4444",
+  "buttonStyle": "PRIMARY_BUTTON",
+  "buttonVariant": "PRIMARY",
+  "disabledWhenInvalid": false,
+  "dynamicBindingPathList": [
+    {
+      "key": "borderRadius"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "isDefaultClickDisabled": true,
+  "isDisabled": false,
+  "isLoading": false,
+  "isVisible": true,
+  "key": "7vn1vdym4y",
+  "leftColumn": 47,
+  "minWidth": 120,
+  "mobileBottomRow": 22,
+  "mobileLeftColumn": 47,
+  "mobileRightColumn": 63,
+  "mobileTopRow": 18,
+  "needsErrorInfo": false,
+  "onClick": "{{\nqryValidarClaveAnulacion.run()\n.then(() => {\n\n  if (\n    Number(qryValidarClaveAnulacion.data?.[0]?.clave_valida) !== 1\n  ) {\n\n    showAlert(\n      \"Clave de anulación incorrecta\",\n      \"error\"\n    );\n\n    return;\n\n  }\n\n  return qrySPAnular.run();\n\n})\n.then(() => {\n\n  if (!qrySPAnular.data?.[0]) {\n    return;\n  }\n\n  closeModal(\"mdlAnularSP\");\n\n  resetWidget(\"inpClaveAnularSP\");\n\n  showAlert(\n    \"Solicitud anulada: \" +\n    qrySPAnular.data[0].numero_solicitud_pago,\n    \"success\"\n  );\n\n  qrySPConsultar.run();\n\n})\n.catch((err) => {\n\n  showAlert(\n    err.message,\n    \"error\"\n  );\n\n});\n}}",
+  "parentId": "z6k917p328",
+  "placement": "CENTER",
+  "recaptchaType": "V3",
+  "renderMode": "CANVAS",
+  "resetFormOnClick": false,
+  "responsiveBehavior": "hug",
+  "rightColumn": 63,
+  "text": "Anular",
+  "topRow": 18,
+  "type": "BUTTON_WIDGET",
+  "version": 1,
+  "widgetId": "gq9t04z2lh",
+  "widgetName": "btnConfirmarAnularSP"
+}

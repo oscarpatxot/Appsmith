@@ -1,0 +1,75 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 44,
+  "bottomRowBeforeCollapse": 44,
+  "boxShadow": "none",
+  "defaultOptionValue": "{{ ((options, serverSideFiltering) => ( \nappsmith.store.modoSA === \"MODIFICAR\"\n    ? appsmith.store.saActual?.id_moneda_otra_moneda\n    : \"\"\n))(selOtraMonedaCodigoSA.options, selOtraMonedaCodigoSA.serverSideFiltering) }}",
+  "dynamicBindingPathList": [
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "sourceData"
+    },
+    {
+      "key": "isVisible"
+    },
+    {
+      "key": "defaultOptionValue"
+    }
+  ],
+  "dynamicHeight": "FIXED",
+  "dynamicPropertyPathList": [
+    {
+      "key": "sourceData"
+    },
+    {
+      "key": "isVisible"
+    }
+  ],
+  "dynamicTriggerPathList": [],
+  "isDisabled": false,
+  "isFilterable": true,
+  "isLoading": false,
+  "isRequired": false,
+  "isVisible": "{{\nNumber(selOtraMonedaSP.selectedOptionValue) === 1\n}}",
+  "key": "h5n2r9gg72",
+  "labelAlignment": "left",
+  "labelPosition": "Top",
+  "labelText": "Moneda de pago",
+  "labelTextSize": "0.875rem",
+  "labelWidth": 5,
+  "leftColumn": 26,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "minWidth": 450,
+  "mobileBottomRow": 16,
+  "mobileLeftColumn": 21,
+  "mobileRightColumn": 41,
+  "mobileTopRow": 9,
+  "needsErrorInfo": false,
+  "optionLabel": "codigo_iso",
+  "optionValue": "id_moneda",
+  "originalBottomRow": 44,
+  "originalTopRow": 37,
+  "parentColumnSpace": 19.3125,
+  "parentId": "a7f8ergc4r",
+  "parentRowSpace": 10,
+  "placeholderText": "Moneda de pago",
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 33,
+  "serverSideFiltering": false,
+  "sourceData": "{{qryMonedas.data}}",
+  "topRow": 37,
+  "topRowBeforeCollapse": 37,
+  "type": "SELECT_WIDGET",
+  "version": 1,
+  "widgetId": "jlbegppbfv",
+  "widgetName": "selOtraMonedaCodigoSA"
+}

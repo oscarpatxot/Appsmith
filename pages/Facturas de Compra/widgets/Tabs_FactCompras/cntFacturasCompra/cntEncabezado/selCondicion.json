@@ -1,0 +1,70 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 13,
+  "boxShadow": "none",
+  "defaultOptionValue": "GREEN",
+  "dynamicBindingPathList": [
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "sourceData"
+    }
+  ],
+  "dynamicHeight": "FIXED",
+  "dynamicPropertyPathList": [
+    {
+      "key": "sourceData"
+    },
+    {
+      "key": "onOptionChange"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onOptionChange"
+    }
+  ],
+  "isDisabled": false,
+  "isFilterable": true,
+  "isLoading": false,
+  "isRequired": false,
+  "isVisible": true,
+  "key": "l116d1aoza",
+  "labelAlignment": "left",
+  "labelPosition": "Top",
+  "labelText": "Condición",
+  "labelTextSize": "0.875rem",
+  "labelWidth": 5,
+  "leftColumn": 0,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "minWidth": 450,
+  "mobileBottomRow": 6,
+  "mobileLeftColumn": 43,
+  "mobileRightColumn": 63,
+  "mobileTopRow": 0,
+  "needsErrorInfo": false,
+  "onOptionChange": "{{\nselCondicion.selectedOptionValue === \"CONTADO\"\n  ? dpVence.setValue(dpFecha.selectedDate)\n  : dpVence.setValue(\n      moment(dpFecha.selectedDate)\n        .add(30, \"days\")\n        .toISOString()\n    )\n}}",
+  "optionLabel": "label",
+  "optionValue": "value",
+  "parentColumnSpace": 19.3125,
+  "parentId": "ie2l97wbbi",
+  "parentRowSpace": 10,
+  "placeholderText": "Seleccione la condición",
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 34,
+  "serverSideFiltering": false,
+  "sourceData": "{{\n[\n  {\n    label: \"Contado\",\n    value: \"CONTADO\"\n  },\n  {\n    label: \"Crédito\",\n    value: \"CREDITO\"\n  }\n]\n}}",
+  "topRow": 7,
+  "type": "SELECT_WIDGET",
+  "version": 1,
+  "widgetId": "qsxex16lmg",
+  "widgetName": "selCondicion"
+}

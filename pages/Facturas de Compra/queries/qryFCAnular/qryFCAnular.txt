@@ -1,0 +1,16 @@
+EXEC dbo.sp_fc_anular
+
+    @id_factura_compra =
+    {{tblFCConsulta.selectedRow.id_factura_compra}},
+
+    @clave_anulacion =
+    {{inpClaveAnulacionFactura.text}},
+
+    @razon_anulacion =
+    {{inpRazonAnulacionFactura.text}},
+
+    @usuario_evento =
+    {{appsmith.user.email}},
+
+    @equipo =
+    'Appsmith';

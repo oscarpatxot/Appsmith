@@ -1,0 +1,59 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "animateLoading": true,
+  "autoFocus": false,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 59,
+  "boxShadow": "none",
+  "defaultText": "{{\n(() => {\n\n  const origen = Number(selMoneda_AV.selectedOptionValue);\n  const destino = Number(selOtraMonedaCodigoAV.selectedOptionValue);\n\n  const monto = Number((inpSubtotalAV.text || \"0\").replace(/,/g, \"\"));\n  const tasa = Number((inpTasaOtraMonedaAV.text || \"0\").replace(/,/g, \"\"));\n\n  if (!origen || !destino || tasa <= 0 || origen === destino) {\n    return \"\";\n  }\n\n  let resultado = null;\n\n  // DOP -> USD/EUR\n  if (origen === 1 && (destino === 2 || destino === 3))\n    resultado = monto / tasa;\n\n  // USD -> DOP\n  else if (origen === 2 && destino === 1)\n    resultado = monto * tasa;\n\n  // USD -> EUR\n  else if (origen === 2 && destino === 3)\n    resultado = monto / tasa;\n\n  // EUR -> DOP\n  else if (origen === 3 && destino === 1)\n    resultado = monto * tasa;\n\n  // EUR -> USD\n  else if (origen === 3 && destino === 2)\n    resultado = monto * tasa;\n\n  return resultado == null\n    ? \"\"\n    : resultado.toLocaleString(\"en-US\", {\n        minimumFractionDigits: 2,\n        maximumFractionDigits: 2\n      });\n\n})()\n}}",
+  "dynamicBindingPathList": [
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "defaultText"
+    }
+  ],
+  "dynamicHeight": "FIXED",
+  "dynamicTriggerPathList": [],
+  "iconAlign": "left",
+  "inputType": "TEXT",
+  "isDisabled": true,
+  "isLoading": false,
+  "isRequired": false,
+  "isVisible": true,
+  "key": "pp2nhdlfl6",
+  "label": "Aplicado Otra Moneda",
+  "labelAlignment": "left",
+  "labelPosition": "Top",
+  "labelStyle": "BOLD",
+  "labelTextSize": "0.875rem",
+  "labelWidth": 5,
+  "leftColumn": 12,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "minWidth": 450,
+  "mobileBottomRow": 59,
+  "mobileLeftColumn": 12,
+  "mobileRightColumn": 32,
+  "mobileTopRow": 52,
+  "needsErrorInfo": false,
+  "originalBottomRow": 59,
+  "originalTopRow": 52,
+  "parentColumnSpace": 19.3125,
+  "parentId": "09p72t8ya1",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "resetOnSubmit": true,
+  "responsiveBehavior": "fill",
+  "rightColumn": 20,
+  "showStepArrows": false,
+  "topRow": 52,
+  "type": "INPUT_WIDGET_V2",
+  "version": 2,
+  "widgetId": "vckhqg0mb6",
+  "widgetName": "inpAplicadoOtraMonedaAV"
+}

@@ -1,0 +1,2 @@
+EXEC dbo.sp_nc_cargar_factura_afectada
+    @id_factura_compra = {{ Number(inpID_FC.text || 0) }}

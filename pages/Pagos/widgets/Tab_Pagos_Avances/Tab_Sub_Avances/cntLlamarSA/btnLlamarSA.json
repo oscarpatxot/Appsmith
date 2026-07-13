@@ -1,0 +1,56 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 7,
+  "boxShadow": "0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)",
+  "buttonColor": "#22c55e",
+  "buttonVariant": "PRIMARY",
+  "disabledWhenInvalid": false,
+  "dynamicBindingPathList": [
+    {
+      "key": "borderRadius"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "iconAlign": "left",
+  "iconName": "add",
+  "isDefaultClickDisabled": true,
+  "isDisabled": false,
+  "isLoading": false,
+  "isVisible": true,
+  "key": "7vn1vdym4y",
+  "leftColumn": 8,
+  "minWidth": 120,
+  "mobileBottomRow": 6,
+  "mobileLeftColumn": 9,
+  "mobileRightColumn": 25,
+  "mobileTopRow": 2,
+  "needsErrorInfo": false,
+  "onClick": "{{\nqryAVCargarSolicitud.run()\n\n.then(() => {\n    return storeValue(\n        \"avanceActual\",\n        qryAVCargarSolicitud.data?.[0]\n    );\n})\n\n.then(() => {\n    showAlert(\n        \"Solicitud de Avance cargada correctamente.\",\n        \"success\"\n    );\n})\n\n.catch(() => {\n\n    storeValue(\"avanceActual\", null);\n\n    showAlert(\n        \"No fue posible cargar la Solicitud de Avance.\",\n        \"error\"\n    );\n\n});\n}}",
+  "originalBottomRow": 55,
+  "originalTopRow": 49,
+  "parentColumnSpace": 19.3125,
+  "parentId": "1o0qchjlo5",
+  "parentRowSpace": 10,
+  "placement": "CENTER",
+  "recaptchaType": "V3",
+  "renderMode": "CANVAS",
+  "resetFormOnClick": false,
+  "responsiveBehavior": "hug",
+  "rightColumn": 16,
+  "text": "Llamar SA",
+  "topRow": 1,
+  "type": "BUTTON_WIDGET",
+  "version": 1,
+  "widgetId": "pedinr2osh",
+  "widgetName": "btnLlamarSA"
+}

@@ -1,0 +1,4 @@
+EXEC dbo.sp_avance_buscar_modificar
+
+    @id_avance =
+        {{ appsmith.store.idAVModificar }};

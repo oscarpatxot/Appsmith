@@ -1,0 +1,60 @@
+EXEC dbo.sp_avance_guardar
+
+    @id_solicitud_avance = {{ appsmith.store.avanceActual.id_solicitud_avance }},
+
+    @fecha_avance = {{ dpFecha_AV.selectedDate }},
+
+    @id_metodo = {{ selMetodo_de_Pago_AV.selectedOptionValue }},
+
+    @referencia = {{ inpReferenciaAV.text }},
+
+    @concepto = {{ inpConcepto_AV.text }},
+
+    @observacion = {{ inpObservacionAV.text }},
+
+    @monto_retencion_dgii =
+        {{ Number((inpRetencionDGIIAV.text || "0").replace(/,/g,"")) }},
+
+    @monto_retencion_itbis =
+        {{ Number((inpRetencionItbisAV.text || "0").replace(/,/g,"")) }},
+
+    @monto_retencion_garantia =
+        {{ Number((inpRetencionGarantiaAV.text || "0").replace(/,/g,"")) }},
+
+    @monto_retencion_tss =
+        {{ Number((inpRetencionTSS_AV.text || "0").replace(/,/g,"")) }},
+
+    @id_tipo_retencion_dgii =
+        {{ selTipoRetDGII_AV.selectedOptionValue || null }},
+
+    @id_tipo_retencion_itbis =
+        {{ selTipoRetITBIS_AV.selectedOptionValue || null }},
+
+    @id_tipo_retencion_garantia =
+        {{ selTipoRetGarantiaAV.selectedOptionValue || null }},
+
+    @id_tipo_retencion_tss =
+        {{ selTipoRetTSS_AV.selectedOptionValue || null }},
+
+    @otra_moneda =
+        {{ Number(selOtraMonedaAV.selectedOptionValue || 0) }},
+
+    @id_moneda_otra_moneda =
+        {{
+            Number(selOtraMonedaAV.selectedOptionValue || 0) === 1
+                ? Number(selOtraMonedaCodigoAV.selectedOptionValue || 0)
+                : null
+        }},
+
+    @tasa_pago_otra_moneda =
+        {{
+            Number(selOtraMonedaAV.selectedOptionValue || 0) === 1
+                ? Number((inpTasaOtraMonedaAV.text || "0").replace(/,/g,""))
+                : null
+        }},
+
+    @usuario_evento =
+        '{{ appsmith.user.email || "Appsmith" }}',
+
+    @equipo =
+        'Appsmith';

@@ -1,0 +1,6 @@
+SELECT
+id_suplidor,
+razon_social
+from suplidores
+order BY
+razon_social

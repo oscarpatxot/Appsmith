@@ -1,0 +1,60 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 28,
+  "boxShadow": "none",
+  "buttonColor": "{{\nappsmith.store.accionOC === \"CERRAR\"\n\t? \"#fca5a5\"\n\t: \"#ef4444\"\n}}",
+  "buttonStyle": "PRIMARY_BUTTON",
+  "buttonVariant": "PRIMARY",
+  "disabledWhenInvalid": false,
+  "dynamicBindingPathList": [
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "buttonColor"
+    },
+    {
+      "key": "text"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "onClick"
+    },
+    {
+      "key": "buttonColor"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "isDefaultClickDisabled": true,
+  "isDisabled": false,
+  "isLoading": false,
+  "isVisible": true,
+  "key": "hty7x5dbq9",
+  "leftColumn": 47,
+  "minWidth": 120,
+  "mobileBottomRow": 22,
+  "mobileLeftColumn": 47,
+  "mobileRightColumn": 63,
+  "mobileTopRow": 18,
+  "needsErrorInfo": false,
+  "onClick": "{{\n(() => {\n\n\tif (!inpClaveAnulacion.text.trim()) {\n\n\t\tshowAlert(\n\t\t\t\"Ingrese la clave de autorización\",\n\t\t\t\"warning\"\n\t\t);\n\n\t\treturn;\n\t}\n\n\tif (!txtRazonAnulacion.text.trim()) {\n\n\t\tshowAlert(\n\t\t\t\"Ingrese la razón\",\n\t\t\t\"warning\"\n\t\t);\n\n\t\treturn;\n\t}\n\n\tconst queryEjecutar =\n\t\tappsmith.store.accionOC === \"CERRAR\"\n\t\t\t? CerrarOC\n\t\t\t: AnularOC;\n\n\tconst mensajeExito =\n\t\tappsmith.store.accionOC === \"CERRAR\"\n\t\t\t? \"Orden cerrada correctamente\"\n\t\t\t: \"Orden anulada correctamente\";\n\n\tqueryEjecutar.run()\n\t\t.then(async () => {\n\n\t\t\tshowAlert(\n\t\t\t\tmensajeExito,\n\t\t\t\t\"success\"\n\t\t\t);\n\n\t\t\tcloseModal(\"mdlAnularOC\");\n\n\t\t\tawait resetWidget(\n\t\t\t\t\"inpClaveAnulacion\"\n\t\t\t);\n\n\t\t\tawait resetWidget(\n\t\t\t\t\"txtRazonAnulacion\"\n\t\t\t);\n\n\t\t\tawait BuscarOC.run();\n\n\t\t\tawait ObtenerOC.run();\n\n\t\t})\n\t\t.catch((error) => {\n\n\t\t\tshowAlert(\n\t\t\t\terror.message,\n\t\t\t\t\"error\"\n\t\t\t);\n\n\t\t});\n\n})()\n}}",
+  "parentId": "gohlvieta9",
+  "placement": "CENTER",
+  "recaptchaType": "V3",
+  "renderMode": "CANVAS",
+  "resetFormOnClick": false,
+  "responsiveBehavior": "hug",
+  "rightColumn": 63,
+  "text": "{{\nappsmith.store.accionOC === \"CERRAR\"\n\t? \"Cerrar\"\n\t: \"Anular\"\n}}",
+  "topRow": 24,
+  "type": "BUTTON_WIDGET",
+  "version": 1,
+  "widgetId": "s54qaf6vt0",
+  "widgetName": "btnConfirmarAnulacion"
+}

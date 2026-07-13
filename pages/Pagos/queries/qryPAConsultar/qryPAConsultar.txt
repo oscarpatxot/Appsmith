@@ -1,0 +1,22 @@
+EXEC dbo.sp_pago_consultar
+
+    @id_pago =
+        {{ inpID_PA_Consulta.text || null }},
+
+    @estado =
+        {{ selEstadoConsultaPA.selectedOptionValue || null }},
+
+    @id_proyecto =
+        {{ selProyectoConsultaPA.selectedOptionValue || null }},
+
+    @id_suplidor =
+        {{ selSuplidorConsultaPA.selectedOptionValue || null }},
+@fecha_desde =
+{{ dpFechaDesdePA.selectedDate
+    ? moment(dpFechaDesdePA.selectedDate).format("YYYY-MM-DD")
+    : null }},
+
+@fecha_hasta =
+{{ dpFechaHastaPA.selectedDate
+    ? moment(dpFechaHastaPA.selectedDate).format("YYYY-MM-DD")
+    : null }};

@@ -1,0 +1,11 @@
+{
+  "gitSyncId": "6a305ee872f7e0c05b308cca_a7baf92d-6ead-4cf8-9a8d-ddbe719243a7",
+  "id": "Facturas de Compra_JS_ImpresionFC",
+  "unpublishedCollection": {
+    "name": "JS_ImpresionFC",
+    "pageId": "Facturas de Compra",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "variables": []
+  }
+}

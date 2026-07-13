@@ -1,0 +1,2 @@
+EXEC sp_sa_buscar_oc
+    @id_orden_compra = {{ inpIdOCllamar.text }}

@@ -1,0 +1,69 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "animateLoading": true,
+  "autoFocus": false,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 45,
+  "boxShadow": "none",
+  "defaultText": "",
+  "dynamicBindingPathList": [
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "isDisabled"
+    },
+    {
+      "key": "isVisible"
+    }
+  ],
+  "dynamicHeight": "FIXED",
+  "dynamicPropertyPathList": [
+    {
+      "key": "isDisabled"
+    },
+    {
+      "key": "isVisible"
+    }
+  ],
+  "dynamicTriggerPathList": [],
+  "iconAlign": "left",
+  "inputType": "PASSWORD",
+  "isDisabled": "{{ appsmith.store.accionSuplidor !== \"MODIFICAR\" }}",
+  "isLoading": false,
+  "isRequired": false,
+  "isVisible": "{{\nappsmith.store.accionSuplidor === \"MODIFICAR\"\n}}",
+  "key": "wicbl72z3i",
+  "label": "Contraseña",
+  "labelAlignment": "left",
+  "labelPosition": "Top",
+  "labelStyle": "",
+  "labelTextSize": "0.875rem",
+  "labelWidth": 5,
+  "leftColumn": 45,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "minWidth": 450,
+  "mobileBottomRow": 53,
+  "mobileLeftColumn": 43,
+  "mobileRightColumn": 63,
+  "mobileTopRow": 46,
+  "needsErrorInfo": false,
+  "parentColumnSpace": 19.625,
+  "parentId": "7uzkcs3gx9",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "resetOnSubmit": true,
+  "responsiveBehavior": "fill",
+  "rightColumn": 61,
+  "shouldAllowAutofill": true,
+  "showStepArrows": false,
+  "topRow": 38,
+  "type": "INPUT_WIDGET_V2",
+  "version": 2,
+  "widgetId": "71c2zk01d0",
+  "widgetName": "inpClave"
+}

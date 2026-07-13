@@ -1,0 +1,66 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 15,
+  "boxShadow": "0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)",
+  "buttonColor": "#93c5fd",
+  "buttonVariant": "PRIMARY",
+  "disabledWhenInvalid": false,
+  "dynamicBindingPathList": [
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "tooltip"
+    },
+    {
+      "key": "isDisabled"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "onClick"
+    },
+    {
+      "key": "isDisabled"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "iconAlign": "left",
+  "iconName": "print",
+  "isDefaultClickDisabled": true,
+  "isDisabled": "{{\n!tblConsultaSA.selectedRow?.id_solicitud_avance\n}}",
+  "isLoading": false,
+  "isVisible": true,
+  "key": "er3pbx7rzn",
+  "leftColumn": 48,
+  "minWidth": 120,
+  "mobileBottomRow": 6,
+  "mobileLeftColumn": 45,
+  "mobileRightColumn": 61,
+  "mobileTopRow": 2,
+  "needsErrorInfo": false,
+  "onClick": "{{\nqrySAImprimirSeleccionada.run(\n\n() => {\n\n    storeValue(\n        \"saImpresion\",\n        qrySAImprimirSeleccionada.data[0]\n    );\n\n    download(\n        JS_SA_Impresion.generarHTMLSA(),\n        appsmith.store.saImpresion.numero_solicitud_avance + \".html\",\n        \"text/html\"\n    );\n\n},\n\n(error) => {\n\n    showAlert(\n        error.message,\n        \"error\"\n    );\n\n}\n\n)\n}}",
+  "originalBottomRow": 152,
+  "originalTopRow": 147,
+  "parentColumnSpace": 19.625,
+  "parentId": "gsr7yabbl5",
+  "parentRowSpace": 10,
+  "placement": "CENTER",
+  "recaptchaType": "V3",
+  "renderMode": "CANVAS",
+  "resetFormOnClick": false,
+  "responsiveBehavior": "hug",
+  "rightColumn": 62,
+  "text": "Imprimir SA",
+  "tooltip": "{{\n!tblConsultaSA.selectedRow?.id_solicitud_avance\n    ? \"Seleccione una Solicitud de Avance para imprimir\"\n    : \"\"\n}}",
+  "topRow": 10,
+  "type": "BUTTON_WIDGET",
+  "version": 1,
+  "widgetId": "skryzrfhlo",
+  "widgetName": "btnImprimirSA2"
+}

@@ -1,0 +1,57 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 5,
+  "boxShadow": "0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)",
+  "buttonColor": "#93c5fd",
+  "buttonVariant": "PRIMARY",
+  "disabledWhenInvalid": false,
+  "dynamicBindingPathList": [
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "text"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "iconAlign": "left",
+  "iconName": "print",
+  "isDefaultClickDisabled": true,
+  "isDisabled": false,
+  "isLoading": false,
+  "isVisible": true,
+  "key": "o310wqau8h",
+  "leftColumn": 45,
+  "minWidth": 120,
+  "mobileBottomRow": 5,
+  "mobileLeftColumn": 45,
+  "mobileRightColumn": 61,
+  "mobileTopRow": 1,
+  "needsErrorInfo": false,
+  "onClick": "{{\nqryAVImprimir.run()\n\n.then(async () => {\n\n    await storeValue(\n        \"avanceImpresion\",\n        qryAVImprimir.data?.[0]\n    );\n\n    download(\n        JS_AV_Impresion.generarHTMLAV(),\n        `${qryAVImprimir.data?.[0]?.numero_avance}.html`,\n        \"text/html\"\n    );\n\n})\n\n.catch((err) => {\n\n    showAlert(\n        err.message,\n        \"error\"\n    );\n\n});\n}}",
+  "parentColumnSpace": 19.625,
+  "parentId": "cd4faqcnir",
+  "parentRowSpace": 10,
+  "placement": "CENTER",
+  "recaptchaType": "V3",
+  "renderMode": "CANVAS",
+  "resetFormOnClick": false,
+  "responsiveBehavior": "hug",
+  "rightColumn": 61,
+  "text": "{{\nappsmith.store.ultimoAVCreado\n    ? \"Último Avance trabajado: \" + appsmith.store.ultimoAVCreado\n    : \"No existe un Avance trabajado en esta sesión\"\n}}",
+  "topRow": 1,
+  "type": "BUTTON_WIDGET",
+  "version": 1,
+  "widgetId": "z0sx3gjjgm",
+  "widgetName": "Button2"
+}

@@ -1,0 +1,5 @@
+SELECT
+    id_tipo_documento,
+    nombre
+FROM tipo_documento
+ORDER BY id_tipo_documento;

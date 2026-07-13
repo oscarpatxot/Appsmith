@@ -1,0 +1,15 @@
+EXEC dbo.sp_nc_crear
+    @id_factura_compra = {{ Number(inpIDFCAfectada.text || inpID_FC.text || 0) }},
+    @id_suplidor = {{ Number(selSuplidorNC.selectedOptionValue || 0) }},
+    @id_proyecto = {{ Number(selProyectoNC.selectedOptionValue || 0) }},
+    @id_moneda = {{ Number(selMonedaNC.selectedOptionValue || 0) }},
+    @fecha_nota = {{ dpFechaNC.selectedDate }},
+    @subtotal_gravado = {{ Number(String(inpST_Gravado_NC.text || "0").replace(/,/g, "")) }},
+    @subtotal_exento = {{ Number(String(inpSTnoGravadoNC.text || "0").replace(/,/g, "")) }},
+    @porcentaje_itbis = {{ Number(selPorcentajeItbisNC.selectedOptionValue || 0) }},
+    @monto_itbis = {{ Number(String(inpITBIS_NC.text || "0").replace(/,/g, "")) }},
+    @monto_total = {{ Number(String(inpTotalNC.text || "0").replace(/,/g, "")) }},
+    @concepto = {{ inpConceptoNC.text }},
+    @comentarios = {{ inpComentarioNC.text }},
+    @ncf = {{ inpNCF_NC.text }},
+    @codigo_seguridad = {{ inpCodigoDeSeguridadNC.text }};

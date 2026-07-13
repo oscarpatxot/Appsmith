@@ -1,0 +1,10 @@
+EXEC dbo.sp_sa_anular
+
+    @id_solicitud_avance =
+        {{ tblConsultaSA.selectedRow.id_solicitud_avance }},
+
+    @usuario_evento =
+        '{{ appsmith.user.email || "Appsmith" }}',
+
+    @equipo =
+        'Appsmith';

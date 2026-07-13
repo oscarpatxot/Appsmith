@@ -1,0 +1,4 @@
+SELECT *
+FROM vw_avances
+WHERE id_avance = {{ Number(inpID_Avance_AAF.text || 0) }}
+  AND estado = 'APLICADO';

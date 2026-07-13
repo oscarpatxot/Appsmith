@@ -1,0 +1,54 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 7,
+  "boxShadow": "0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)",
+  "buttonColor": "#22c55e",
+  "buttonVariant": "PRIMARY",
+  "disabledWhenInvalid": false,
+  "dynamicBindingPathList": [
+    {
+      "key": "borderRadius"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "iconAlign": "left",
+  "iconName": "add",
+  "isDefaultClickDisabled": true,
+  "isDisabled": false,
+  "isLoading": false,
+  "isVisible": true,
+  "key": "4rqp7wfcj9",
+  "leftColumn": 8,
+  "minWidth": 120,
+  "mobileBottomRow": 6,
+  "mobileLeftColumn": 8,
+  "mobileRightColumn": 24,
+  "mobileTopRow": 2,
+  "needsErrorInfo": false,
+  "onClick": "{{\nJS_PA.resetEncabezado()\n.then(() => qryPACargarEncabezado.run())\n.then(() => {\n    return storeValue(\n        \"pagoActual\",\n        qryPACargarEncabezado.data?.[0]\n    );\n})\n.then(() => qryPACargarDetalle.run())\n.then(() => {\n    return storeValue(\n        \"detallePago\",\n        qryPACargarDetalle.data\n    );\n})\n.then(() => {\n    showAlert(\n        \"Solicitud de Pago cargada correctamente.\",\n        \"success\"\n    );\n})\n.catch(() => {\n    storeValue(\"pagoActual\", null);\n    storeValue(\"detallePago\", []);\n});\n}}",
+  "parentColumnSpace": 19.3125,
+  "parentId": "pzk6d0pto4",
+  "parentRowSpace": 10,
+  "placement": "CENTER",
+  "recaptchaType": "V3",
+  "renderMode": "CANVAS",
+  "resetFormOnClick": false,
+  "responsiveBehavior": "hug",
+  "rightColumn": 20,
+  "text": "Llamar Solicitud de Pago",
+  "topRow": 2,
+  "type": "BUTTON_WIDGET",
+  "version": 1,
+  "widgetId": "w3mycpguem",
+  "widgetName": "btnLlamarSP_PA"
+}

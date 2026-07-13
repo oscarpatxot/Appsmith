@@ -1,0 +1,69 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "animateLoading": true,
+  "autoFocus": false,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 57,
+  "bottomRowBeforeCollapse": 57,
+  "boxShadow": "none",
+  "defaultText": "{{\nNumber(\n  appsmith.store.modoPA === \"MODIFICAR\"\n    ? (appsmith.store.encabezadoPA?.tasa_pago_otra_moneda || 0)\n    : (appsmith.store.pagoActual?.tasa_pago_otra_moneda || 0)\n).toLocaleString('en-US', {\n  minimumFractionDigits: 2,\n  maximumFractionDigits: 2\n})\n}}",
+  "dynamicBindingPathList": [
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "defaultText"
+    },
+    {
+      "key": "isVisible"
+    }
+  ],
+  "dynamicHeight": "FIXED",
+  "dynamicPropertyPathList": [
+    {
+      "key": "isVisible"
+    }
+  ],
+  "dynamicTriggerPathList": [],
+  "iconAlign": "left",
+  "inputType": "TEXT",
+  "isDisabled": false,
+  "isLoading": false,
+  "isRequired": false,
+  "isVisible": "{{\nNumber(selOtraMonedaPA.selectedOptionValue) === 1\n}}",
+  "key": "ceojg65ho3",
+  "label": "Tasa",
+  "labelAlignment": "left",
+  "labelPosition": "Top",
+  "labelStyle": "",
+  "labelTextSize": "0.875rem",
+  "labelWidth": 5,
+  "leftColumn": 0,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "minWidth": 450,
+  "mobileBottomRow": 47,
+  "mobileLeftColumn": 11,
+  "mobileRightColumn": 31,
+  "mobileTopRow": 40,
+  "needsErrorInfo": false,
+  "originalBottomRow": 57,
+  "originalTopRow": 50,
+  "parentColumnSpace": 19.3125,
+  "parentId": "1rx35z98hu",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "resetOnSubmit": true,
+  "responsiveBehavior": "fill",
+  "rightColumn": 3,
+  "showStepArrows": false,
+  "topRow": 50,
+  "topRowBeforeCollapse": 50,
+  "type": "INPUT_WIDGET_V2",
+  "version": 2,
+  "widgetId": "q0ekl6mu0c",
+  "widgetName": "inpTasaOtraMonedaPA"
+}

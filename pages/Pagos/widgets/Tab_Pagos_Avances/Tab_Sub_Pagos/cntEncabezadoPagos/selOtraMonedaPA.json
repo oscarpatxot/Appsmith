@@ -1,0 +1,68 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 50,
+  "boxShadow": "none",
+  "defaultOptionValue": "{{ ((options, serverSideFiltering) => ( \nappsmith.store.modoPA === \"MODIFICAR\"\n  ? (appsmith.store.encabezadoPA?.otra_moneda ? 1 : 0)\n  : (appsmith.store.pagoActual?.otra_moneda ? 1 : 0)\n))(selOtraMonedaPA.options, selOtraMonedaPA.serverSideFiltering) }}",
+  "dynamicBindingPathList": [
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "sourceData"
+    },
+    {
+      "key": "defaultOptionValue"
+    }
+  ],
+  "dynamicHeight": "FIXED",
+  "dynamicPropertyPathList": [
+    {
+      "key": "sourceData"
+    }
+  ],
+  "dynamicTriggerPathList": [],
+  "isDisabled": false,
+  "isFilterable": true,
+  "isLoading": false,
+  "isRequired": false,
+  "isVisible": true,
+  "key": "h5n2r9gg72",
+  "labelAlignment": "left",
+  "labelPosition": "Top",
+  "labelStyle": "BOLD",
+  "labelText": "¿Pagar en otra moneda?",
+  "labelTextSize": "0.875rem",
+  "labelWidth": 5,
+  "leftColumn": 0,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "minWidth": 450,
+  "mobileBottomRow": 47,
+  "mobileLeftColumn": 9,
+  "mobileRightColumn": 29,
+  "mobileTopRow": 40,
+  "needsErrorInfo": false,
+  "optionLabel": "label",
+  "optionValue": "value",
+  "originalBottomRow": 136,
+  "originalTopRow": 129,
+  "parentColumnSpace": 19.3125,
+  "parentId": "1rx35z98hu",
+  "parentRowSpace": 10,
+  "placeholderText": "¿Pagar en otra moneda?",
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 10,
+  "serverSideFiltering": false,
+  "sourceData": "{{\n[\n  {\n    label: \"Sí\",\n    value: 1\n  },\n  {\n    label: \"No\",\n    value: 0\n  }\n]\n}}",
+  "topRow": 43,
+  "type": "SELECT_WIDGET",
+  "version": 1,
+  "widgetId": "z67mk8v7xg",
+  "widgetName": "selOtraMonedaPA"
+}

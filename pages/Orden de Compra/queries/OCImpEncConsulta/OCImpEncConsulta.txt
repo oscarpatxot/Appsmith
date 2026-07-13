@@ -1,0 +1,4 @@
+EXEC dbo.sp_imprimir_orden_compra
+
+    @id_orden_compra =
+    {{ tblOCConsulta.selectedRow.id_orden_compra }};

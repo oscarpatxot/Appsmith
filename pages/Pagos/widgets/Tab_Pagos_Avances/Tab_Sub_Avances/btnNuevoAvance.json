@@ -1,0 +1,57 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 5,
+  "boxShadow": "0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)",
+  "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+  "buttonVariant": "PRIMARY",
+  "disabledWhenInvalid": false,
+  "dynamicBindingPathList": [
+    {
+      "key": "buttonColor"
+    },
+    {
+      "key": "borderRadius"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "iconAlign": "left",
+  "iconName": "document",
+  "isDefaultClickDisabled": true,
+  "isDisabled": false,
+  "isLoading": false,
+  "isVisible": true,
+  "key": "o310wqau8h",
+  "leftColumn": 17,
+  "minWidth": 120,
+  "mobileBottomRow": 5,
+  "mobileLeftColumn": 21,
+  "mobileRightColumn": 37,
+  "mobileTopRow": 1,
+  "needsErrorInfo": false,
+  "onClick": "{{\nPromise.all([\n\n    storeValue(\"modoAV\", null),\n    storeValue(\"idAVModificar\", null),\n    storeValue(\"encabezadoAV\", null),\n    storeValue(\"avanceActual\", null),\n\n    resetWidget(\"inpLlamarSA\", true),\n\n    resetWidget(\"inpID_AV\", true),\n    resetWidget(\"inpNumeroAV\", true),\n\n    resetWidget(\"inpSA_AV\", true),\n    resetWidget(\"inpNumeroSA_AV\", true),\n\n    resetWidget(\"selProyecto_AV\", true),\n    resetWidget(\"sel_Suplidor_AV\", true),\n\n    resetWidget(\"inpConcepto_AV\", true),\n    resetWidget(\"inpObservacionAV\", true),\n\n    resetWidget(\"dpFecha_AV\", true),\n\n    resetWidget(\"selMoneda_AV\", true),\n    resetWidget(\"selMetodo_de_Pago_AV\", true),\n\n    resetWidget(\"inpReferenciaAV\", true),\n\n    resetWidget(\"inpRetencionItbisAV\", true),\n    resetWidget(\"inpRetencionDGIIAV\", true),\n    resetWidget(\"inpRetencionGarantiaAV\", true),\n    resetWidget(\"inpRetencionTSS_AV\", true),\n\n    resetWidget(\"selTipoRetITBIS_AV\", true),\n    resetWidget(\"selTipoRetDGII_AV\", true),\n    resetWidget(\"selTipoRetGarantiaAV\", true),\n    resetWidget(\"selTipoRetTSS_AV\", true),\n\n    resetWidget(\"selOtraMonedaAV\", true),\n    resetWidget(\"selOtraMonedaCodigoAV\", true),\n    resetWidget(\"inpTasaOtraMonedaAV\", true),\n\n    resetWidget(\"inpAplicadoOtraMonedaAV\", true),\n    resetWidget(\"inpDesembolsoOtraMonedaAV\", true),\n\n    resetWidget(\"inpID_OC_AV\", true),\n    resetWidget(\"inpMontoSolicitadoAV\", true),\n    resetWidget(\"inpCotizacionDeOC_AV\", true),\n    resetWidget(\"inpMontoTotal_AV\", true),\n    resetWidget(\"inpBalancePendOC_AV\", true),\n\n    resetWidget(\"inpSubtotalAV\", true),\n    resetWidget(\"inpTotalDesembolsoAV\", true)\n\n])\n\n.then(() => {\n\n    showAlert(\n        \"Formulario listo para crear un nuevo Avance.\",\n        \"success\"\n    );\n\n});\n}}",
+  "parentColumnSpace": 19.625,
+  "parentId": "cd4faqcnir",
+  "parentRowSpace": 10,
+  "placement": "CENTER",
+  "recaptchaType": "V3",
+  "renderMode": "CANVAS",
+  "resetFormOnClick": false,
+  "responsiveBehavior": "hug",
+  "rightColumn": 34,
+  "text": "Nuevo Avance",
+  "topRow": 1,
+  "type": "BUTTON_WIDGET",
+  "version": 1,
+  "widgetId": "ua0yw8by5o",
+  "widgetName": "btnNuevoAvance"
+}

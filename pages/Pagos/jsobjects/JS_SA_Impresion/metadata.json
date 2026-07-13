@@ -1,0 +1,11 @@
+{
+  "gitSyncId": "6a305ee872f7e0c05b308cca_179cce92-b646-4bd7-add8-349e9b9949fe",
+  "id": "Pagos_JS_SA_Impresion",
+  "unpublishedCollection": {
+    "name": "JS_SA_Impresion",
+    "pageId": "Pagos",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "variables": []
+  }
+}

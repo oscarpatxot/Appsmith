@@ -1,0 +1,4 @@
+SELECT *
+FROM vw_facturas
+WHERE id_factura_compra = {{ Number(inpID_FC_AAF.text || 0) }}
+  AND estado <> 'ANULADA';

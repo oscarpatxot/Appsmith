@@ -1,0 +1,6 @@
+SELECT
+    id_proyecto,
+    nombre_proyecto
+FROM proyectos
+WHERE estado = 'ACTIVO'
+ORDER BY nombre_proyecto;

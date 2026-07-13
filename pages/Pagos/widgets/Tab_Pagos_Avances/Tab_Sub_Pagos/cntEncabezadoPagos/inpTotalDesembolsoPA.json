@@ -1,0 +1,57 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "animateLoading": true,
+  "autoFocus": false,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 49,
+  "boxShadow": "none",
+  "defaultText": "{{\n(\n  Number((inpSubtotalPA.text || \"0\").replace(/,/g, \"\")) -\n  Number((inpRetencionItbisPA.text || \"0\").replace(/,/g, \"\")) -\n  Number((inpRetencionDGIIPA.text || \"0\").replace(/,/g, \"\")) -\n  Number((inpRetencionGarantiaPA.text || \"0\").replace(/,/g, \"\")) -\n  Number((inpRetencionTSS_PA.text || \"0\").replace(/,/g, \"\"))\n).toLocaleString(\"en-US\", {\n  minimumFractionDigits: 2,\n  maximumFractionDigits: 2\n})\n}}",
+  "dynamicBindingPathList": [
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "defaultText"
+    }
+  ],
+  "dynamicHeight": "FIXED",
+  "dynamicTriggerPathList": [],
+  "iconAlign": "left",
+  "inputType": "TEXT",
+  "isDisabled": true,
+  "isLoading": false,
+  "isRequired": false,
+  "isVisible": true,
+  "key": "8yl4udmb79",
+  "label": "Total Desembolso",
+  "labelAlignment": "left",
+  "labelPosition": "Top",
+  "labelStyle": "BOLD",
+  "labelTextSize": "0.875rem",
+  "labelWidth": 5,
+  "leftColumn": 45,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "minWidth": 450,
+  "mobileBottomRow": 47,
+  "mobileLeftColumn": 38,
+  "mobileRightColumn": 58,
+  "mobileTopRow": 40,
+  "needsErrorInfo": false,
+  "parentColumnSpace": 19.3125,
+  "parentId": "1rx35z98hu",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "resetOnSubmit": true,
+  "responsiveBehavior": "fill",
+  "rightColumn": 57,
+  "showStepArrows": false,
+  "topRow": 42,
+  "type": "INPUT_WIDGET_V2",
+  "version": 2,
+  "widgetId": "ez7vpgv5hf",
+  "widgetName": "inpTotalDesembolsoPA"
+}

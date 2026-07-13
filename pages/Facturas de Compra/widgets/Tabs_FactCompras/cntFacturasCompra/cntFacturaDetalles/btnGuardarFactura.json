@@ -1,0 +1,65 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 42,
+  "boxShadow": "0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)",
+  "buttonColor": "{{\nappsmith.store.modoFC === \"MODIFICAR\"\n    ? \"#f59e0b\"\n    : \"#22c55e\"\n}}",
+  "buttonVariant": "PRIMARY",
+  "disabledWhenInvalid": false,
+  "dynamicBindingPathList": [
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "text"
+    },
+    {
+      "key": "buttonColor"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "onClick"
+    },
+    {
+      "key": "buttonColor"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "iconAlign": "left",
+  "iconName": "floppy-disk",
+  "isDefaultClickDisabled": true,
+  "isDisabled": false,
+  "isLoading": false,
+  "isVisible": true,
+  "key": "8wx0eexjz1",
+  "leftColumn": 37,
+  "minWidth": 120,
+  "mobileBottomRow": 58,
+  "mobileLeftColumn": 37,
+  "mobileRightColumn": 53,
+  "mobileTopRow": 54,
+  "needsErrorInfo": false,
+  "onClick": "{{\nJSFacturaCompra.validarFactura()\n\n?\n\n(\n    appsmith.store.modoFC === \"MODIFICAR\"\n\n    ?\n\nqryFCModificar.run(\n\n    async (data) => {\n\n        await storeValue(\n            \"ultimaFCCreada\",\n            appsmith.store.idFCModificar\n        );\n\n        showAlert(\n            \"Factura #\" +\n            data[0].id_factura_compra +\n            \" modificada correctamente\",\n            \"success\"\n        );\n\n        JSFacturaCompra.nuevaFactura();\n\n    }\n\n)\n\n    :\n\nqryFCCrear.run(\n    async (data) => {\n\n        await storeValue(\n            \"ultimaFCCreada\",\n            data[0].id_factura_compra\n        );\n\n        showAlert(\n            \"Factura #\" +\n            data[0].id_factura_compra +\n            \" creada correctamente\",\n            \"success\"\n        );\n\n        JSFacturaCompra.limpiarFormulario();\n\n    }\n)\n\n)\n\n:\n\nnull\n}}",
+  "originalBottomRow": 61,
+  "originalTopRow": 53,
+  "parentColumnSpace": 19.625,
+  "parentId": "11ujnlcj3a",
+  "parentRowSpace": 10,
+  "placement": "CENTER",
+  "recaptchaType": "V3",
+  "renderMode": "CANVAS",
+  "resetFormOnClick": false,
+  "responsiveBehavior": "hug",
+  "rightColumn": 56,
+  "text": "{{\nappsmith.store.modoFC === \"MODIFICAR\"\n?\n\"Modificar Factura\"\n:\n\"Guardar Factura\"\n}}",
+  "topRow": 34,
+  "type": "BUTTON_WIDGET",
+  "version": 1,
+  "widgetId": "2odsdlarda",
+  "widgetName": "btnGuardarFactura"
+}

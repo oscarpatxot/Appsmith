@@ -1,0 +1,34 @@
+EXEC dbo.sp_nc_buscar
+
+    @id_nota_credito =
+        {{ inpID_NC_Consultar.text || null }},
+
+    @id_proyecto =
+        {{
+            selProyectoConsultaNC.selectedOptionValue
+            || null
+        }},
+
+    @id_suplidor =
+        {{
+            selSuplidorConsultaNC.selectedOptionValue
+            || null
+        }},
+
+    @estado =
+        {{
+            selEstadoConsultaNC.selectedOptionValue
+            || null
+        }},
+
+    @fecha_desde =
+        {{
+            moment(dpDesdeConsultaNC.selectedDate)
+            .format('YYYY-MM-DD')
+        }},
+
+    @fecha_hasta =
+        {{
+            moment(dpHastaConsultaNC.selectedDate)
+            .format('YYYY-MM-DD')
+        }};

@@ -1,0 +1,2 @@
+EXEC dbo.sp_obtener_detalle_orden_compra_modificar
+    @id_orden_compra = {{appsmith.store.idOCModificar}}

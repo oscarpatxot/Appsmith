@@ -1,0 +1,4 @@
+EXEC dbo.sp_suplidor_impresion_encabezado
+
+    @id_suplidor =
+        {{ tblConsultaDeSuplidores.selectedRow.id_suplidor }}

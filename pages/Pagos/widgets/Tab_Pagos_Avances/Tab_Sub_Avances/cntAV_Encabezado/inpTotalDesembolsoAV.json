@@ -1,0 +1,59 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "animateLoading": true,
+  "autoFocus": false,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 49,
+  "boxShadow": "none",
+  "defaultText": "{{\nNumber(\n    (Number((inpSubtotalAV.text || \"0\").replace(/,/g,\"\")))\n    - (Number((inpRetencionItbisAV.text || \"0\").replace(/,/g,\"\")))\n    - (Number((inpRetencionDGIIAV.text || \"0\").replace(/,/g,\"\")))\n    - (Number((inpRetencionGarantiaAV.text || \"0\").replace(/,/g,\"\")))\n    - (Number((inpRetencionTSS_AV.text || \"0\").replace(/,/g,\"\")))\n).toLocaleString('en-US', {\n    minimumFractionDigits: 2,\n    maximumFractionDigits: 2\n})\n}}",
+  "dynamicBindingPathList": [
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "defaultText"
+    }
+  ],
+  "dynamicHeight": "FIXED",
+  "dynamicTriggerPathList": [],
+  "iconAlign": "left",
+  "inputType": "TEXT",
+  "isDisabled": true,
+  "isLoading": false,
+  "isRequired": false,
+  "isVisible": true,
+  "key": "8yl4udmb79",
+  "label": "Total Desembolso",
+  "labelAlignment": "left",
+  "labelPosition": "Top",
+  "labelStyle": "BOLD",
+  "labelTextSize": "0.875rem",
+  "labelWidth": 5,
+  "leftColumn": 41,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "minWidth": 450,
+  "mobileBottomRow": 47,
+  "mobileLeftColumn": 38,
+  "mobileRightColumn": 58,
+  "mobileTopRow": 40,
+  "needsErrorInfo": false,
+  "originalBottomRow": 140,
+  "originalTopRow": 133,
+  "parentColumnSpace": 19.3125,
+  "parentId": "09p72t8ya1",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "resetOnSubmit": true,
+  "responsiveBehavior": "fill",
+  "rightColumn": 53,
+  "showStepArrows": false,
+  "topRow": 42,
+  "type": "INPUT_WIDGET_V2",
+  "version": 2,
+  "widgetId": "h84ts76nw0",
+  "widgetName": "inpTotalDesembolsoAV"
+}

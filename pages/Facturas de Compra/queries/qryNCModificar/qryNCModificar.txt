@@ -1,0 +1,34 @@
+EXEC dbo.sp_nc_modificar
+
+    @id_nota_credito =
+        {{ID_NCparaModificar.text}},
+
+    @fecha_nota =
+        {{dpFechaNC.selectedDate}},
+
+    @subtotal_gravado =
+        {{Number(inpST_Gravado_NC.text.replace(/,/g,''))}},
+
+    @subtotal_exento =
+        {{Number(inpSTnoGravadoNC.text.replace(/,/g,''))}},
+
+    @porcentaje_itbis =
+        {{Number(selPorcentajeItbisNC.selectedOptionValue)}},
+
+    @monto_itbis =
+        {{Number(inpITBIS_NC.text.replace(/,/g,''))}},
+
+    @monto_total =
+        {{Number(inpTotalNC.text.replace(/,/g,''))}},
+
+    @concepto =
+        {{inpConceptoNC.text}},
+
+    @comentarios =
+        {{inpComentarioNC.text}},
+
+    @ncf =
+        {{inpNCF_NC.text}},
+
+    @codigo_seguridad =
+        {{inpCodigoDeSeguridadNC.text}}

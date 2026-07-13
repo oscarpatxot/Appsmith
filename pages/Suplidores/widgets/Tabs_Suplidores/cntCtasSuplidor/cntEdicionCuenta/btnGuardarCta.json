@@ -1,0 +1,67 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 16,
+  "boxShadow": "0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)",
+  "buttonColor": "{{\nappsmith.store.accionCuenta === \"MODIFICAR\"\n    ? \"#f59e0b\"\n    : \"#22c55e\"\n}}",
+  "buttonVariant": "PRIMARY",
+  "disabledWhenInvalid": false,
+  "dynamicBindingPathList": [
+    {
+      "key": "buttonColor"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "text"
+    },
+    {
+      "key": "tooltip"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "buttonColor"
+    },
+    {
+      "key": "onClick"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "iconAlign": "left",
+  "iconName": "floppy-disk",
+  "isDefaultClickDisabled": true,
+  "isDisabled": false,
+  "isLoading": false,
+  "isVisible": true,
+  "key": "2wxhofwxlx",
+  "leftColumn": 39,
+  "minWidth": 120,
+  "mobileBottomRow": 23,
+  "mobileLeftColumn": 39,
+  "mobileRightColumn": 55,
+  "mobileTopRow": 19,
+  "needsErrorInfo": false,
+  "onClick": "{{\n!selSuplidorCtas.selectedOptionValue\n    ? showAlert(\"Debe seleccionar un suplidor.\", \"warning\")\n\n: !selBancoCtas.selectedOptionValue\n    ? showAlert(\"Debe seleccionar un banco.\", \"warning\")\n\n: !inpNumeroCta.text?.trim()\n    ? showAlert(\"Debe indicar el número de cuenta.\", \"warning\")\n\n: !selTipoDeCta.selectedOptionValue\n    ? showAlert(\"Debe seleccionar el tipo de cuenta.\", \"warning\")\n\n: !selMonedaCta.selectedOptionValue\n    ? showAlert(\"Debe seleccionar la moneda.\", \"warning\")\n\n: selEsPrincipalCta.selectedOptionValue === undefined\n    ? showAlert(\"Debe indicar si la cuenta es principal.\", \"warning\")\n\n: appsmith.store.accionCuenta === \"MODIFICAR\"\n&& !inpClaveCuenta.text\n\n    ? showAlert(\n        \"Debe indicar la contraseña de autorización.\",\n        \"warning\"\n    )\n\n: appsmith.store.accionCuenta === \"MODIFICAR\"\n&& inpClaveCuenta.text !== ObtenerClaveSistema.data[0]?.valor_configuracion\n\n    ? showAlert(\n        \"Contraseña incorrecta.\",\n        \"error\"\n    )\n\n: (\n   appsmith.store.accionCuenta === \"MODIFICAR\"\n\n        ? ModificarCuentaSuplidor.run()\n\n        : GuardarCuentaSuplidor.run()\n)\n\n.then(() =>\n\n    ObtenerCuentasSuplidor.run()\n\n)\n\n.then(() =>\n\n    showAlert(\n        appsmith.store.accionCuenta === \"MODIFICAR\"\n            ? \"Cuenta modificada correctamente.\"\n            : \"Cuenta guardada correctamente.\",\n        \"success\"\n    )\n\n)\n\n.then(() =>\n\n    storeValue(\n        \"accionCuenta\",\n        \"CREAR\"\n    )\n\n)\n\n.then(() =>\n\n    resetWidget(\n        \"cntEdicionCuenta\",\n        true\n    )\n\n)\n\n.catch((error) =>\n\n    showAlert(\n        error.message,\n        \"error\"\n    )\n\n)\n}}",
+  "parentColumnSpace": 19.3125,
+  "parentId": "teqtokze72",
+  "parentRowSpace": 10,
+  "placement": "CENTER",
+  "recaptchaType": "V3",
+  "renderMode": "CANVAS",
+  "resetFormOnClick": false,
+  "responsiveBehavior": "hug",
+  "rightColumn": 55,
+  "text": "{{\nappsmith.store.accionCuenta === \"MODIFICAR\"\n    ? \"Modificar\"\n    : \"Guardar\"\n}}",
+  "tooltip": "{{\ntblCtasSuplidor.selectedRow?.id_cuenta\n    ? \"Modo Modificar. Si desea guardar una cuenta nueva, por favor quite la selección actual de la tabla.\"\n    : \"Guardar nueva cuenta bancaria.\"\n}}",
+  "topRow": 10,
+  "type": "BUTTON_WIDGET",
+  "version": 1,
+  "widgetId": "7v82w4o2l3",
+  "widgetName": "btnGuardarCta"
+}

@@ -1,0 +1,64 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 22,
+  "boxShadow": "0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)",
+  "buttonColor": "#dbeafe",
+  "buttonVariant": "PRIMARY",
+  "disabledWhenInvalid": false,
+  "dynamicBindingPathList": [
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "isDisabled"
+    },
+    {
+      "key": "tooltip"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "onClick"
+    },
+    {
+      "key": "isDisabled"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "iconAlign": "left",
+  "iconName": "document-open",
+  "isDefaultClickDisabled": true,
+  "isDisabled": "{{\n!tblOCConsulta.selectedRow?.id_orden_compra\n}}",
+  "isLoading": false,
+  "isVisible": false,
+  "key": "hty7x5dbq9",
+  "leftColumn": 52,
+  "minWidth": 120,
+  "mobileBottomRow": 23,
+  "mobileLeftColumn": 44,
+  "mobileRightColumn": 60,
+  "mobileTopRow": 19,
+  "needsErrorInfo": false,
+  "onClick": "{{\nPromise.all([\n\n    OCImpEncConsulta.run(),\n    OCImpDetConsulta.run()\n\n]).then(async () => {\n\n    await storeValue(\n        \"ocImpresion\",\n        OCImpEncConsulta.data[0]\n    );\n\n    await storeValue(\n        \"detalleOCImpresion\",\n        OCImpDetConsulta.data\n    );\n\n    showAlert(\n        \"Orden cargada para impresión\",\n        \"success\"\n    );\n\n});\n}}",
+  "parentColumnSpace": 19.625,
+  "parentId": "av6nso60ek",
+  "parentRowSpace": 10,
+  "placement": "CENTER",
+  "recaptchaType": "V3",
+  "renderMode": "CANVAS",
+  "resetFormOnClick": false,
+  "responsiveBehavior": "hug",
+  "rightColumn": 60,
+  "text": "Vizualizar OC",
+  "tooltip": "{{\n!tblOCConsulta.selectedRow?.id_orden_compra\n    ? \"Debe seleccionar una Orden de Compra\"\n    : \"\"\n}}",
+  "topRow": 17,
+  "type": "BUTTON_WIDGET",
+  "version": 1,
+  "widgetId": "5ugdlaq4uz",
+  "widgetName": "btnCargarImprimir2"
+}

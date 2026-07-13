@@ -1,0 +1,19 @@
+SELECT
+    id_factura_compra,
+    numero_factura,
+    fecha_factura,
+    monto_total,
+    estado,
+
+    id_suplidor,
+    razon_social,
+
+    id_proyecto,
+    nombre_proyecto,
+
+    id_moneda,
+    codigo_iso,
+		balance_pendiente
+
+FROM vw_facturas
+WHERE id_factura_compra = {{ inpFCparaSPlinea.text }};

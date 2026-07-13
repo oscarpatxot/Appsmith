@@ -1,0 +1,3 @@
+SELECT valor_configuracion
+FROM configuracion
+WHERE nombre_configuracion = 'clave_anulacion'

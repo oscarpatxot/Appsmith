@@ -1,0 +1,67 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 5,
+  "boxShadow": "0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)",
+  "buttonColor": "#93c5fd",
+  "buttonVariant": "PRIMARY",
+  "disabledWhenInvalid": false,
+  "dynamicBindingPathList": [
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "isDisabled"
+    },
+    {
+      "key": "tooltip"
+    },
+    {
+      "key": "text"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "onClick"
+    },
+    {
+      "key": "isDisabled"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "iconAlign": "left",
+  "iconName": "print",
+  "isDefaultClickDisabled": true,
+  "isDisabled": "{{\n!appsmith.store.ultimaFCCreada\n}}",
+  "isLoading": false,
+  "isVisible": true,
+  "key": "5e8mf2gpe3",
+  "leftColumn": 47,
+  "minWidth": 120,
+  "mobileBottomRow": 4,
+  "mobileLeftColumn": 47,
+  "mobileRightColumn": 63,
+  "mobileTopRow": 0,
+  "needsErrorInfo": false,
+  "onClick": "{{\nappsmith.store.ultimaFCCreada\n\n?\n\n(\n    storeValue(\n        \"idFCImpresion\",\n        appsmith.store.ultimaFCCreada\n    )\n\n    .then(() => ObtenerFCImpresion.run())\n\n    .then((fc) => {\n\n        storeValue(\n            \"fcImpresion\",\n            fc[0]\n        );\n\n        return ObtenerDetalleFCImpresion.run();\n\n    })\n\n    .then((detalle) => {\n\n        return storeValue(\n            \"detalleFCImpresion\",\n            detalle\n        );\n\n    })\n\n    .then(() => {\n\n        download(\n            JS_ImpresionFC.generarHTMLFC(),\n            \"FC-\" +\n            String(\n                appsmith.store.ultimaFCCreada\n            ).padStart(6,\"0\")\n            +\n            \".html\",\n            \"text/html\"\n        );\n\n        showAlert(\n            \"Factura cargada e impresa correctamente\",\n            \"success\"\n        );\n\n    })\n\n)\n\n:\n\nshowAlert(\n    \"No existe una factura creada en esta sesión\",\n    \"warning\"\n)\n}}",
+  "parentColumnSpace": 19.625,
+  "parentId": "qo4oe9wvdv",
+  "parentRowSpace": 10,
+  "placement": "CENTER",
+  "recaptchaType": "V3",
+  "renderMode": "CANVAS",
+  "resetFormOnClick": false,
+  "responsiveBehavior": "hug",
+  "rightColumn": 63,
+  "text": "{{\nappsmith.store.ultimaFCCreada\n    ? \"Imprimir última FC trabajada: \" + appsmith.store.ultimaFCCreada\n    : \"\"\n}}",
+  "tooltip": "{{\n!appsmith.store.ultimaFCCreada\n    ? \"No existe una factura trabajada en esta sesión\"\n    : \"\"\n}}",
+  "topRow": 0,
+  "type": "BUTTON_WIDGET",
+  "version": 1,
+  "widgetId": "tdkk5oq9j7",
+  "widgetName": "btnImprimirUltimaFC"
+}

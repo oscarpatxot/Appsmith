@@ -1,0 +1,57 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 22,
+  "boxShadow": "0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)",
+  "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+  "buttonVariant": "PRIMARY",
+  "disabledWhenInvalid": false,
+  "dynamicBindingPathList": [
+    {
+      "key": "buttonColor"
+    },
+    {
+      "key": "borderRadius"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "iconAlign": "left",
+  "iconName": "filter-list",
+  "isDefaultClickDisabled": true,
+  "isDisabled": false,
+  "isLoading": false,
+  "isVisible": true,
+  "key": "er3pbx7rzn",
+  "leftColumn": 0,
+  "minWidth": 120,
+  "mobileBottomRow": 22,
+  "mobileLeftColumn": 2,
+  "mobileRightColumn": 18,
+  "mobileTopRow": 18,
+  "needsErrorInfo": false,
+  "onClick": "{{\nPromise.all([\n\n    inpID_PA_Consulta.setValue(\"\"),\n\n    selEstadoConsultaPA.setSelectedOption(\"\"),\n    selProyectoConsultaPA.setSelectedOption(\"\"),\n    selSuplidorConsultaPA.setSelectedOption(\"\"),\n\n    dpFechaDesdePA.setValue(\n        moment().subtract(30, 'days').startOf('day').add(1, 'second')\n    ),\n\n    dpFechaHastaPA.setValue(\n        moment().endOf('day')\n    )\n\n]).then(() => {\n\n    qryPAConsultar.run();\n\n    showAlert(\n        \"Filtros limpiados\",\n        \"success\"\n    );\n\n});\n}}",
+  "parentColumnSpace": 19.625,
+  "parentId": "6f7pj3ijj2",
+  "parentRowSpace": 10,
+  "placement": "CENTER",
+  "recaptchaType": "V3",
+  "renderMode": "CANVAS",
+  "resetFormOnClick": false,
+  "responsiveBehavior": "hug",
+  "rightColumn": 8,
+  "text": "Limpiar filtros",
+  "topRow": 18,
+  "type": "BUTTON_WIDGET",
+  "version": 1,
+  "widgetId": "dz8i5x6p43",
+  "widgetName": "btnLimpiarFiltrosPA"
+}

@@ -1,0 +1,35 @@
+SELECT
+
+    s.id_suplidor,
+    s.razon_social,
+
+    s.id_tipo_documento,
+    td.nombre AS tipo_documento,
+
+    s.numero_documento,
+    s.nombre_comercial,
+    s.telefono_suplidor,
+    s.direccion_proveedor,
+    s.correo_proveedor,
+
+    s.persona_contacto,
+    s.telefono_contacto,
+    s.correo_contacto,
+
+    s.nombre_pago,
+    s.condicion_pago,
+    s.estado,
+    s.comentario,
+
+    s.fecha_creacion,
+
+    s.es_contratista,
+    s.es_intercompany
+
+FROM suplidores s
+
+INNER JOIN tipo_documento td
+    ON td.id_tipo_documento = s.id_tipo_documento
+
+ORDER BY
+    s.razon_social;

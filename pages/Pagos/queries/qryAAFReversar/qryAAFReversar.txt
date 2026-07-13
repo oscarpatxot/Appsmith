@@ -1,0 +1,9 @@
+EXEC dbo.sp_aplicacion_avance_reversar
+
+    @id_detalle = {{ tblConsultaAAF.selectedRow.id_detalle }},
+
+    @motivo_reversion = '{{ inpMotivoReversionAAF.text }}',
+
+    @usuario_evento = '{{ appsmith.user.email }}',
+
+    @equipo = 'Appsmith';

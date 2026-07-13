@@ -1,0 +1,4 @@
+EXEC dbo.sp_pago_imprimir_detalle
+
+    @id_pago =
+        {{ appsmith.store.idPAImpresion }};

@@ -1,0 +1,4 @@
+EXEC dbo.sp_pago_cargar_solicitud
+
+    @id_solicitud_pago =
+        {{ Number(inpID_SolPago_PA_llamar.text) }}

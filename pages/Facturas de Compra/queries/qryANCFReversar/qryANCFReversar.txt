@@ -1,0 +1,13 @@
+EXEC dbo.sp_aplicacion_nc_reversar
+
+    @id_detalle_nc_aplicada =
+        {{ tblConsultaANCF.selectedRow.id_detalle_nc_aplicada }},
+
+    @motivo_reversion =
+        '{{ inpMotivoReversionANCF.text }}',
+
+    @usuario_evento =
+        '{{ appsmith.user.email }}',
+
+    @equipo =
+        'Appsmith';

@@ -1,0 +1,3 @@
+EXEC dbo.sp_nc_obtener_factura_afectada
+    @id_nota_credito =
+        {{appsmith.store.idNCModificar}};

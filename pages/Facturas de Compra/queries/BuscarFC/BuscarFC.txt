@@ -1,0 +1,43 @@
+EXEC dbo.sp_fc_buscar
+
+    @id_factura_compra =
+        {{
+            inpIDFactura.text
+            ?
+            Number(inpIDFactura.text)
+            :
+            null
+        }},
+
+    @fecha_desde =
+        '{{dpDesdeConsulta.selectedDate}}',
+
+    @fecha_hasta =
+        '{{dpHastaConsulta.selectedDate}}',
+
+    @id_proyecto =
+        {{
+            selProyectoConsulta.selectedOptionValue
+            ?
+            Number(selProyectoConsulta.selectedOptionValue)
+            :
+            null
+        }},
+
+    @id_suplidor =
+        {{
+            selSuplidorConsulta.selectedOptionValue
+            ?
+            Number(selSuplidorConsulta.selectedOptionValue)
+            :
+            null
+        }},
+
+    @estado =
+        {{
+            selEstadoConsulta.selectedOptionValue
+            ?
+            selEstadoConsulta.selectedOptionValue
+            :
+            null
+        }}

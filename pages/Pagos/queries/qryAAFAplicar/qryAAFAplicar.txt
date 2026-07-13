@@ -1,0 +1,11 @@
+EXEC dbo.sp_aplicar_avance
+
+    @id_avance = {{ Number(inpID_Avance_AAF.text) }},
+
+    @id_factura_compra = {{ Number(inpID_FC_AAF.text) }},
+
+    @monto_aplicado = {{ Number((inpMontoAplicadoAAF.text || "0").replace(/,/g,"")) }},
+
+    @usuario_evento = '{{ appsmith.user.email }}',
+
+    @equipo = 'Appsmith';

@@ -1,0 +1,3 @@
+EXEC dbo.sp_nc_obtener
+    @id_nota_credito =
+        {{appsmith.store.idNCModificar}};

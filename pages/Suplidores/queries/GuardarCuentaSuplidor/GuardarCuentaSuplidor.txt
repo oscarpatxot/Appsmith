@@ -1,0 +1,12 @@
+EXEC sp_cuenta_suplidor_crear
+
+    @id_suplidor = {{ selSuplidorCtas.selectedOptionValue }},
+    @banco = {{ selBancoCtas.selectedOptionValue }},
+    @numero_cuenta = {{ inpNumeroCta.text }},
+    @tipo_cuenta = {{ selTipoDeCta.selectedOptionValue }},
+    @moneda = {{ selMonedaCta.selectedOptionValue }},
+    @es_principal = {{ selEsPrincipalCta.selectedOptionValue }},
+    @datos_adicionales = {{ inpDatosAdicionalesCta.text }},
+
+    @usuario_evento = {{ appsmith.user.email }},
+    @equipo = 'Appsmith';

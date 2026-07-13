@@ -1,0 +1,4 @@
+EXEC dbo.sp_sp_detalle
+
+    @id_solicitud_pago =
+        {{ tblConsultaSP.selectedRow.id_solicitud_pago }}

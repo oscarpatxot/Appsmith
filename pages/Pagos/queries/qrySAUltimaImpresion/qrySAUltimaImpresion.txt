@@ -1,0 +1,4 @@
+EXEC dbo.sp_sa_impresion
+
+    @id_solicitud_avance =
+        {{ appsmith.store.idUltimaSATrabajada }}

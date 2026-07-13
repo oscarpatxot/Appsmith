@@ -1,0 +1,64 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 20,
+  "boxShadow": "0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)",
+  "buttonColor": "#ef4444",
+  "buttonVariant": "PRIMARY",
+  "disabledWhenInvalid": false,
+  "dynamicBindingPathList": [
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "isDisabled"
+    },
+    {
+      "key": "tooltip"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "onClick"
+    },
+    {
+      "key": "isDisabled"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "iconAlign": "left",
+  "iconName": "delete",
+  "isDefaultClickDisabled": true,
+  "isDisabled": "{{\n!tblConsultaAAF.selectedRow?.id_detalle\n}}",
+  "isLoading": false,
+  "isVisible": true,
+  "key": "o310wqau8h",
+  "leftColumn": 41,
+  "minWidth": 120,
+  "mobileBottomRow": 15,
+  "mobileLeftColumn": 41,
+  "mobileRightColumn": 57,
+  "mobileTopRow": 11,
+  "needsErrorInfo": false,
+  "onClick": "{{\nshowModal(\"mdlReversionAAF\")\n}}",
+  "parentColumnSpace": 19,
+  "parentId": "chgbcljsto",
+  "parentRowSpace": 10,
+  "placement": "CENTER",
+  "recaptchaType": "V3",
+  "renderMode": "CANVAS",
+  "resetFormOnClick": false,
+  "responsiveBehavior": "hug",
+  "rightColumn": 55,
+  "text": "Anular Aplicación",
+  "tooltip": "{{\n!tblConsultaAAF.selectedRow?.id_detalle\n    ? \"Seleccione una aplicación para anular.\"\n    : \"\"\n}}",
+  "topRow": 16,
+  "type": "BUTTON_WIDGET",
+  "version": 1,
+  "widgetId": "7qqi1zur9j",
+  "widgetName": "btnAnularAplicacionAAF"
+}

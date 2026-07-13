@@ -1,0 +1,41 @@
+SELECT
+
+    oc.id_orden_compra,
+    oc.numero_orden,
+
+    oc.id_suplidor,
+    s.razon_social,
+
+    oc.id_proyecto,
+    p.nombre_proyecto,
+
+    oc.id_moneda,
+    tm.codigo_iso,
+
+    oc.fecha_orden,
+    oc.estado,
+
+    oc.total_estimado,
+    oc.subtotal,
+    oc.itbis,
+    oc.descuento,
+
+    oc.cotizacion,
+    oc.comentarios,
+
+    oc.subtotal_no_gravado,
+    oc.porcentaje_itbis,
+    oc.cerrada
+
+FROM orden_compra oc
+
+INNER JOIN suplidores s
+    ON oc.id_suplidor = s.id_suplidor
+
+INNER JOIN proyectos p
+    ON oc.id_proyecto = p.id_proyecto
+
+INNER JOIN tipo_moneda tm
+    ON oc.id_moneda = tm.id_moneda
+
+WHERE oc.id_orden_compra = {{ inpIdOCllamar.text }};

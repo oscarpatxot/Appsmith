@@ -1,0 +1,11 @@
+EXEC dbo.sp_cerrar_orden_compra
+
+    @id_orden_compra = {{tblOCConsulta.selectedRow.id_orden_compra}},
+
+    @clave = '{{inpClaveAnulacion.text}}',
+
+    @razon_cierre = '{{txtRazonAnulacion.text}}',
+
+    @usuario_evento = '{{appsmith.user.email}}',
+
+    @equipo = 'Appsmith';

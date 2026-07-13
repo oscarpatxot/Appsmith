@@ -1,0 +1,39 @@
+EXEC dbo.sp_pago_guardar
+
+    @id_solicitud_pago = {{ appsmith.store.pagoActual?.id_solicitud_pago }},
+
+    @fecha_pago = {{ dpFechaPA.selectedDate }},
+
+    @id_metodo = {{ selMetodosPagoPA.selectedOptionValue }},
+
+    @referencia = {{ inpReferenciaPA.text }},
+
+    @monto_retencion_dgii = {{ Number(inpRetencionDGIIPA.text || 0) }},
+    @monto_retencion_itbis = {{ Number(inpRetencionItbisPA.text || 0) }},
+    @monto_retencion_garantia = {{ Number(inpRetencionGarantiaPA.text || 0) }},
+    @monto_retencion_tss = {{ Number(inpRetencionTSS_PA.text || 0) }},
+
+    @id_tipo_retencion_dgii = {{ selTipoRetDGII_PA.selectedOptionValue || null }},
+    @id_tipo_retencion_itbis = {{ selTipoRetITBIS_PA.selectedOptionValue || null }},
+    @id_tipo_retencion_garantia = {{ selTipoRetGarantiaPA.selectedOptionValue || null }},
+    @id_tipo_retencion_tss = {{ selTipoRetTSS_PA.selectedOptionValue || null }},
+
+    @otra_moneda = {{ selOtraMonedaPA.selectedOptionValue }},
+
+    @id_moneda_otra_moneda =
+    {{
+        selOtraMonedaPA.selectedOptionValue == 1
+            ? selOtraMonedaCodigoPA.selectedOptionValue
+            : null
+    }},
+
+    @tasa_pago_otra_moneda =
+    {{
+        selOtraMonedaPA.selectedOptionValue == 1
+            ? Number(inpTasaOtraMonedaPA.text)
+            : null
+    }},
+
+    @usuario_evento = {{ appsmith.user.email }},
+
+    @equipo = 'Appsmith';

@@ -1,0 +1,4 @@
+EXEC dbo.sp_pago_cargar_encabezado
+
+    @id_pago =
+    {{ appsmith.store.idPAModificar }}

@@ -1,0 +1,30 @@
+SELECT
+
+    p.nombre_proyecto,
+    s.razon_social,
+    oc.total_estimado,
+    tm.codigo_iso,
+
+    CASE
+        WHEN oc.estado = 'ANULADA'
+            THEN 'ANULADA'
+
+        WHEN ISNULL(oc.cerrada,0) = 1
+            THEN 'CERRADA'
+
+        ELSE oc.estado
+    END AS estado
+
+FROM orden_compra oc
+
+INNER JOIN proyectos p
+    ON p.id_proyecto = oc.id_proyecto
+
+INNER JOIN suplidores s
+    ON s.id_suplidor = oc.id_suplidor
+
+INNER JOIN tipo_moneda tm
+    ON tm.id_moneda = oc.id_moneda
+
+WHERE oc.id_orden_compra =
+    {{ inpIDOrdenCompra.text }}

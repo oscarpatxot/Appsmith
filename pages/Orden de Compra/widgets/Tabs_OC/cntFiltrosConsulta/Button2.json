@@ -1,0 +1,64 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 16,
+  "boxShadow": "0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)",
+  "buttonColor": "#93c5fd",
+  "buttonVariant": "PRIMARY",
+  "disabledWhenInvalid": false,
+  "dynamicBindingPathList": [
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "isDisabled"
+    },
+    {
+      "key": "tooltip"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "onClick"
+    },
+    {
+      "key": "isDisabled"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "iconAlign": "left",
+  "iconName": "print",
+  "isDefaultClickDisabled": true,
+  "isDisabled": "{{\n!tblOCConsulta.selectedRow?.id_orden_compra\n}}",
+  "isLoading": false,
+  "isVisible": true,
+  "key": "1oj6t2b4qz",
+  "leftColumn": 44,
+  "minWidth": 120,
+  "mobileBottomRow": 23,
+  "mobileLeftColumn": 44,
+  "mobileRightColumn": 60,
+  "mobileTopRow": 19,
+  "needsErrorInfo": false,
+  "onClick": "{{\nPromise.all([\n\n    OCImpEncConsulta.run(),\n    OCImpDetConsulta.run()\n\n])\n\n.then(async () => {\n\n    await storeValue(\n        \"ocImpresion\",\n        OCImpEncConsulta.data[0]\n    );\n\n    await storeValue(\n        \"detalleOCImpresion\",\n        OCImpDetConsulta.data\n    );\n\n    download(\n        JS_ImpresionOC.generarHTMLOC(),\n        \"OC-\" +\n        String(\n            tblOCConsulta.selectedRow.id_orden_compra\n        ).padStart(6,\"0\")\n        +\n        \".html\",\n        \"text/html\"\n    );\n\n    showAlert(\n        \"Orden descargada correctamente\",\n        \"success\"\n    );\n\n});\n}}",
+  "parentColumnSpace": 19.625,
+  "parentId": "av6nso60ek",
+  "parentRowSpace": 10,
+  "placement": "CENTER",
+  "recaptchaType": "V3",
+  "renderMode": "CANVAS",
+  "resetFormOnClick": false,
+  "responsiveBehavior": "hug",
+  "rightColumn": 60,
+  "text": "Imprimir OC",
+  "tooltip": "{{\n!tblOCConsulta.selectedRow?.id_orden_compra\n    ? \"Debe seleccionar una Orden de Compra\"\n    : \"\"\n}}",
+  "topRow": 11,
+  "type": "BUTTON_WIDGET",
+  "version": 1,
+  "widgetId": "5irx1c7ev8",
+  "widgetName": "Button2"
+}

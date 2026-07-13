@@ -1,0 +1,51 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 26,
+  "boxShadow": "none",
+  "buttonColor": "#ef4444",
+  "buttonStyle": "PRIMARY_BUTTON",
+  "buttonVariant": "PRIMARY",
+  "disabledWhenInvalid": false,
+  "dynamicBindingPathList": [
+    {
+      "key": "borderRadius"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "isDefaultClickDisabled": true,
+  "isDisabled": false,
+  "isLoading": false,
+  "isVisible": true,
+  "key": "5e8mf2gpe3",
+  "leftColumn": 46,
+  "minWidth": 120,
+  "mobileBottomRow": 22,
+  "mobileLeftColumn": 47,
+  "mobileRightColumn": 63,
+  "mobileTopRow": 18,
+  "needsErrorInfo": false,
+  "onClick": "{{\n!inpClaveAnulacionFactura.text\n\n?\n\nshowAlert(\n    \"Debe indicar la clave de anulación\",\n    \"warning\"\n)\n\n:\n\n!inpRazonAnulacionFactura.text.trim()\n\n?\n\nshowAlert(\n    \"Debe indicar la razón de anulación\",\n    \"warning\"\n)\n\n:\n\nqryFCAnular.run(\n\n    () => {\n\n        showAlert(\n            \"Factura anulada correctamente\",\n            \"success\"\n        );\n\n        closeModal(\n            \"mdlAnularFactura\"\n        );\n\n        resetWidget(\n            \"inpClaveAnulacionFactura\"\n        );\n\n        resetWidget(\n            \"inpRazonAnulacionFactura\"\n        );\n\n        BuscarFC.run();\n\n    }\n\n)\n}}",
+  "parentId": "pfs57j1d11",
+  "placement": "CENTER",
+  "recaptchaType": "V3",
+  "renderMode": "CANVAS",
+  "resetFormOnClick": false,
+  "responsiveBehavior": "hug",
+  "rightColumn": 62,
+  "text": "Anular",
+  "topRow": 22,
+  "type": "BUTTON_WIDGET",
+  "version": 1,
+  "widgetId": "h02m0h2afn",
+  "widgetName": "btnConfirmarAnulacionFactura"
+}

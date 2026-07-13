@@ -1,0 +1,76 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 57,
+  "bottomRowBeforeCollapse": 57,
+  "boxShadow": "none",
+  "defaultOptionValue": "{{ ((options, serverSideFiltering) => ( \nappsmith.store.modoPA === \"MODIFICAR\"\n  ? appsmith.store.encabezadoPA?.id_moneda_otra_moneda\n  : appsmith.store.pagoActual?.id_moneda_otra_moneda\n))(selOtraMonedaCodigoPA.options, selOtraMonedaCodigoPA.serverSideFiltering) }}",
+  "dynamicBindingPathList": [
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "sourceData"
+    },
+    {
+      "key": "defaultOptionValue"
+    },
+    {
+      "key": "isVisible"
+    }
+  ],
+  "dynamicHeight": "FIXED",
+  "dynamicPropertyPathList": [
+    {
+      "key": "sourceData"
+    },
+    {
+      "key": "isVisible"
+    }
+  ],
+  "dynamicTriggerPathList": [],
+  "isDisabled": false,
+  "isFilterable": true,
+  "isLoading": false,
+  "isRequired": false,
+  "isVisible": "{{\nNumber(selOtraMonedaPA.selectedOptionValue) === 1\n}}",
+  "key": "h5n2r9gg72",
+  "labelAlignment": "left",
+  "labelPosition": "Top",
+  "labelStyle": "",
+  "labelText": "Moneda de pago",
+  "labelTextSize": "0.875rem",
+  "labelWidth": 5,
+  "leftColumn": 3,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "minWidth": 450,
+  "mobileBottomRow": 16,
+  "mobileLeftColumn": 21,
+  "mobileRightColumn": 41,
+  "mobileTopRow": 9,
+  "needsErrorInfo": false,
+  "optionLabel": "codigo_iso",
+  "optionValue": "id_moneda",
+  "originalBottomRow": 57,
+  "originalTopRow": 50,
+  "parentColumnSpace": 19.3125,
+  "parentId": "1rx35z98hu",
+  "parentRowSpace": 10,
+  "placeholderText": "Moneda de pago",
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 10,
+  "serverSideFiltering": false,
+  "sourceData": "{{qryMonedas.data}}",
+  "topRow": 50,
+  "topRowBeforeCollapse": 50,
+  "type": "SELECT_WIDGET",
+  "version": 1,
+  "widgetId": "1w7b1dh94j",
+  "widgetName": "selOtraMonedaCodigoPA"
+}

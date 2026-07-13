@@ -1,0 +1,44 @@
+EXEC dbo.sp_sa_modificar
+
+    @id_solicitud_avance =
+        {{ appsmith.store.idSAActual }},
+
+    @fecha_solicitud =
+        '{{ moment(dpFechaSA.selectedDate).format("YYYY-MM-DD") }}',
+
+    @monto_solicitado =
+        {{ Number((inpMontoSolicitadoSA.text || "0").replace(/,/g,'')) }},
+
+    @observacion =
+        {{ inpObservacionSA.text || null }},
+
+    @retencion_itbis_posible =
+        {{ Number((inpRetIbisSA.text || "0").replace(/,/g,'')) }},
+
+    @retencion_dgii_posible =
+        {{ Number((inpRetDGIISA.text || "0").replace(/,/g,'')) }},
+
+    @retencion_garantia_posible =
+        {{ Number((inpRetGarantiaSA.text || "0").replace(/,/g,'')) }},
+
+    @retencion_tss_posible =
+        {{ Number((inpRetTSSSA.text || "0").replace(/,/g,'')) }},
+
+    @otra_moneda =
+        {{ Number(selOtraMonedaSA.selectedOptionValue || 0) }},
+
+    @id_moneda_otra_moneda =
+        {{ Number(selOtraMonedaCodigoSA.selectedOptionValue || 0) }},
+
+    @tasa_pago_otra_moneda =
+        {{
+            inpTasaOtraMonedaSA.text
+                ? Number(inpTasaOtraMonedaSA.text.replace(/,/g,''))
+                : null
+        }},
+
+    @usuario_evento =
+        '{{ appsmith.user.email || "Appsmith" }}',
+
+    @equipo =
+        'Appsmith';

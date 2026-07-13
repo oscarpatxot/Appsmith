@@ -1,0 +1,6 @@
+SELECT
+    id_tipo_retencion,
+    nombre
+FROM tipo_retencion
+WHERE nombre LIKE '%Garantía%'
+ORDER BY id_tipo_retencion;

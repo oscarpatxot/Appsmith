@@ -1,0 +1,3 @@
+SELECT *
+FROM dbo.vw_solicitudes_pago
+WHERE id_solicitud_pago = {{ Number(inpID_SolPago_PA_llamar.text) }}

@@ -1,0 +1,4 @@
+EXEC dbo.sp_sa_cargar
+
+    @id_solicitud_avance =
+        {{ tblConsultaSA.selectedRow.id_solicitud_avance }}

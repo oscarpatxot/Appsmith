@@ -1,0 +1,5 @@
+SELECT
+    id_banco,
+    nombre_banco
+FROM bancos
+ORDER BY nombre_banco;

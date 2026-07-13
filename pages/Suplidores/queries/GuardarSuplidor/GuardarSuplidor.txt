@@ -1,0 +1,27 @@
+EXEC sp_suplidor_crear
+
+    @razon_social = {{ inpRazonSocial.text }},
+    @id_tipo_documento = {{ selTipoDocumento.selectedOptionValue }},
+    @numero_documento = {{ inpNumeroDocumento.text }},
+
+    @nombre_comercial = {{ inpNombreComercial.text }},
+    @telefono_suplidor = {{ inpTelefono.text }},
+    @direccion_proveedor = {{ inpDireccion.text }},
+    @correo_proveedor = {{ inpCorreo.text }},
+
+    @persona_contacto = {{ inpPersonaContacto.text }},
+    @telefono_contacto = {{ inpTelefonoContacto.text }},
+    @correo_contacto = {{ inpCorreoDelContacto.text }},
+
+    @nombre_pago = {{ inpNombrePagos.text }},
+
+    @condicion_pago = {{ selCondicionPago.selectedOptionValue }},
+    @estado = {{ selEstado.selectedOptionValue }},
+
+    @comentario = {{ inpComentario.text }},
+
+    @es_contratista = {{ selContratista.selectedOptionValue }},
+    @es_intercompany = {{ selIntercompany.selectedOptionValue }},
+
+    @usuario_evento = {{ appsmith.user.email }},
+    @equipo = 'Appsmith';

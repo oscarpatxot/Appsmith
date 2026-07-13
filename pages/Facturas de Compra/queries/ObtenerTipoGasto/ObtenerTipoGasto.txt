@@ -1,0 +1,6 @@
+SELECT
+id_tipo_gasto,
+nombre
+FROM tipo_gasto
+ORDER BY 
+id_tipo_gasto

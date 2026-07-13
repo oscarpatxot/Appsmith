@@ -1,0 +1,4 @@
+EXEC sp_suplidor_obtener
+
+    @id_suplidor =
+        {{ appsmith.store.idSuplidor }}

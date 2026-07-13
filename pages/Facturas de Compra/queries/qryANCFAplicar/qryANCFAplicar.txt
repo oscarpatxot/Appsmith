@@ -1,0 +1,15 @@
+EXEC dbo.sp_aplicar_nota_credito
+
+    @id_nota_credito =
+        {{ Number(inpID_NC_ANCF.text) }},
+
+    @id_factura_compra =
+        {{ Number(inpID_FC_ANCF.text) }},
+
+    @monto_aplicado =
+        {{ Number((inpMontoAplicar_ANCF.text || "0").replace(/,/g,"")) }},
+
+    @usuario_evento =
+        '{{ appsmith.user.email }}',
+
+    @equipo = 'Appsmith';

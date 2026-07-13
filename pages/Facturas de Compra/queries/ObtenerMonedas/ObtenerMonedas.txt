@@ -1,0 +1,5 @@
+SELECT
+    id_moneda,
+    codigo_iso
+FROM tipo_moneda
+ORDER BY id_moneda

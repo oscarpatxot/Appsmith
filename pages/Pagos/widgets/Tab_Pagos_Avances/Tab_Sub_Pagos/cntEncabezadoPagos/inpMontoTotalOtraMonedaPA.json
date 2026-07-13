@@ -1,0 +1,69 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "animateLoading": true,
+  "autoFocus": false,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 50,
+  "bottomRowBeforeCollapse": 50,
+  "boxShadow": "none",
+  "defaultText": "{{\n(() => {\n\n  const origen = Number(selMonedaPA.selectedOptionValue);\n  const destino = Number(selOtraMonedaCodigoPA.selectedOptionValue);\n\n  const monto = Number((inpSubtotalPA.text || \"0\").replace(/,/g, \"\"));\n  const tasa = Number((inpTasaOtraMonedaPA.text || \"0\").replace(/,/g, \"\"));\n\n  if (!origen || !destino || tasa <= 0 || origen === destino) {\n    return \"\";\n  }\n\n  let resultado = null;\n\n  // DOP -> USD/EUR\n  if (origen === 1 && (destino === 2 || destino === 3))\n    resultado = monto / tasa;\n\n  // USD -> DOP\n  else if (origen === 2 && destino === 1)\n    resultado = monto * tasa;\n\n  // USD -> EUR\n  else if (origen === 2 && destino === 3)\n    resultado = monto / tasa;\n\n  // EUR -> DOP\n  else if (origen === 3 && destino === 1)\n    resultado = monto * tasa;\n\n  // EUR -> USD\n  else if (origen === 3 && destino === 2)\n    resultado = monto * tasa;\n\n  return resultado == null\n    ? \"\"\n    : resultado.toLocaleString(\"en-US\", {\n        minimumFractionDigits: 2,\n        maximumFractionDigits: 2\n      });\n\n})()\n}}",
+  "dynamicBindingPathList": [
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "defaultText"
+    },
+    {
+      "key": "isVisible"
+    }
+  ],
+  "dynamicHeight": "FIXED",
+  "dynamicPropertyPathList": [
+    {
+      "key": "isVisible"
+    }
+  ],
+  "dynamicTriggerPathList": [],
+  "iconAlign": "left",
+  "inputType": "TEXT",
+  "isDisabled": true,
+  "isLoading": false,
+  "isRequired": false,
+  "isVisible": "{{\nNumber(selOtraMonedaPA.selectedOptionValue) === 1\n}}",
+  "key": "lba4lglnw9",
+  "label": "Monto otra moneda",
+  "labelAlignment": "left",
+  "labelPosition": "Top",
+  "labelStyle": "BOLD",
+  "labelTextSize": "0.875rem",
+  "labelWidth": 5,
+  "leftColumn": 11,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "minWidth": 450,
+  "mobileBottomRow": 50,
+  "mobileLeftColumn": 11,
+  "mobileRightColumn": 31,
+  "mobileTopRow": 43,
+  "needsErrorInfo": false,
+  "originalBottomRow": 50,
+  "originalTopRow": 43,
+  "parentColumnSpace": 19.3125,
+  "parentId": "1rx35z98hu",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "resetOnSubmit": true,
+  "responsiveBehavior": "fill",
+  "rightColumn": 20,
+  "showStepArrows": false,
+  "topRow": 43,
+  "topRowBeforeCollapse": 43,
+  "type": "INPUT_WIDGET_V2",
+  "version": 2,
+  "widgetId": "1ji0ywjfnh",
+  "widgetName": "inpMontoTotalOtraMonedaPA"
+}

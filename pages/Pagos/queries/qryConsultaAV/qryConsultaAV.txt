@@ -1,0 +1,19 @@
+EXEC dbo.sp_avance_consultar
+
+    @id_avance =
+        {{ inpID_AV_Consulta.text ? Number(inpID_AV_Consulta.text) : null }},
+
+    @estado =
+        {{ selEstadoConsultaAV.selectedOptionValue || null }},
+
+    @id_proyecto =
+        {{ selProyectoConsultaAV.selectedOptionValue || null }},
+
+    @id_suplidor =
+        {{ selSuplidorConsultaAV.selectedOptionValue || null }},
+
+    @fecha_desde =
+        {{ dpDesdeConsultaAV.selectedDate || null }},
+
+    @fecha_hasta =
+        {{ dpHastaConsultaAV.selectedDate || null }};

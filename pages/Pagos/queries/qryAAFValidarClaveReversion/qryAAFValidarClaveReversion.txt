@@ -1,0 +1,6 @@
+SELECT
+    COUNT(*) AS clave_valida
+FROM configuracion
+WHERE nombre_configuracion = 'clave_anulacion'
+  AND LTRIM(RTRIM(valor_configuracion))
+      = LTRIM(RTRIM('{{ inpClaveReversionAAF.text }}'));

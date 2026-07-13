@@ -1,0 +1,4 @@
+EXEC dbo.sp_sp_buscar
+
+    @id_solicitud_pago =
+        {{ appsmith.store.idSPModificar }}

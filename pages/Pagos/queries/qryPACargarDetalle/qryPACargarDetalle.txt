@@ -1,0 +1,4 @@
+EXEC dbo.sp_pago_cargar_solicitud_detalle
+
+    @id_solicitud_pago =
+        {{ appsmith.store.pagoActual.id_solicitud_pago }}

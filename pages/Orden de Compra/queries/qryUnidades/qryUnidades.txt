@@ -1,0 +1,5 @@
+SELECT
+    codigo AS label,
+    codigo AS value
+FROM unidades_medicion
+ORDER BY id;

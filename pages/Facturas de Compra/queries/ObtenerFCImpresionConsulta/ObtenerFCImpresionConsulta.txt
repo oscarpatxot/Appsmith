@@ -1,0 +1,3 @@
+EXEC dbo.sp_fc_imprimir
+    @id_factura_compra =
+    {{ tblFCConsulta.selectedRow.id_factura_compra }}

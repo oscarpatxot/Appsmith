@@ -1,0 +1,6 @@
+SELECT
+id_proyecto,
+nombre_proyecto
+from proyectos
+order BY
+nombre_proyecto

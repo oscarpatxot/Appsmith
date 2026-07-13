@@ -1,0 +1,4 @@
+EXEC dbo.sp_avance_cargar_encabezado
+
+    @id_avance =
+        {{ tblConsultaAV.selectedRow.id_avance }};

@@ -1,0 +1,67 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 38,
+  "boxShadow": "0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)",
+  "buttonColor": "{{\nappsmith.store.accionSuplidor === \"MODIFICAR\"\n    ? \"#f59e0b\"\n    : \"#22c55e\"\n}}",
+  "buttonVariant": "PRIMARY",
+  "disabledWhenInvalid": false,
+  "dynamicBindingPathList": [
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "text"
+    },
+    {
+      "key": "buttonColor"
+    },
+    {
+      "key": "tooltip"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "onClick"
+    },
+    {
+      "key": "buttonColor"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "iconAlign": "left",
+  "iconName": "floppy-disk",
+  "isDefaultClickDisabled": true,
+  "isDisabled": false,
+  "isLoading": false,
+  "isVisible": true,
+  "key": "2wxhofwxlx",
+  "leftColumn": 45,
+  "minWidth": 120,
+  "mobileBottomRow": 39,
+  "mobileLeftColumn": 45,
+  "mobileRightColumn": 61,
+  "mobileTopRow": 35,
+  "needsErrorInfo": false,
+  "onClick": "{{\nappsmith.store.accionSuplidor === \"MODIFICAR\"\n&& inpClave.text !== ObtenerClaveSistema.data[0].valor_configuracion\n\n? showAlert(\n    \"Contraseña incorrecta.\",\n    \"error\"\n)\n\n: (\n    appsmith.store.accionSuplidor === \"MODIFICAR\"\n\n        ? ModificarSuplidor.run()\n\n        : GuardarSuplidor.run()\n)\n\n.then(() =>\n\n    showAlert(\n        appsmith.store.accionSuplidor === \"MODIFICAR\"\n            ? \"Suplidor modificado correctamente.\"\n            : \"Suplidor creado correctamente.\",\n        \"success\"\n    )\n\n)\n\n.then(() =>\n\n    storeValue(\n        \"accionSuplidor\",\n        \"CREAR\"\n    )\n\n)\n\n.then(() =>\n\n    resetWidget(\n        \"cntAgregarSuplidor\",\n        true\n    )\n\n)\n\n.catch((error) =>\n\n    showAlert(\n        error.message,\n        \"error\"\n    )\n\n)\n}}",
+  "parentColumnSpace": 19.625,
+  "parentId": "7uzkcs3gx9",
+  "parentRowSpace": 10,
+  "placement": "CENTER",
+  "recaptchaType": "V3",
+  "renderMode": "CANVAS",
+  "resetFormOnClick": false,
+  "responsiveBehavior": "hug",
+  "rightColumn": 61,
+  "text": "{{\nappsmith.store.accionSuplidor === \"MODIFICAR\"\n    ? \"Modificar\"\n    : \"Guardar\"\n}}",
+  "tooltip": "{{\nappsmith.store.accionSuplidor === \"MODIFICAR\"\n    ? \"Modo Modificar. Los cambios se guardarán sobre el suplidor seleccionado.\"\n    : \"Crear un nuevo suplidor.\"\n}}",
+  "topRow": 32,
+  "type": "BUTTON_WIDGET",
+  "version": 1,
+  "widgetId": "ajfpvbpn15",
+  "widgetName": "btnGuardar"
+}

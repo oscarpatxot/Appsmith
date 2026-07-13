@@ -1,0 +1,64 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 21,
+  "boxShadow": "0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)",
+  "buttonColor": "#93c5fd",
+  "buttonVariant": "PRIMARY",
+  "disabledWhenInvalid": false,
+  "dynamicBindingPathList": [
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "isDisabled"
+    },
+    {
+      "key": "tooltip"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "onClick"
+    },
+    {
+      "key": "isDisabled"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "iconAlign": "left",
+  "iconName": "print",
+  "isDefaultClickDisabled": true,
+  "isDisabled": "{{\n!tblConsultaNC.selectedRow?.id_nota_credito\n}}",
+  "isLoading": false,
+  "isVisible": true,
+  "key": "er3pbx7rzn",
+  "leftColumn": 43,
+  "minWidth": 120,
+  "mobileBottomRow": 6,
+  "mobileLeftColumn": 45,
+  "mobileRightColumn": 61,
+  "mobileTopRow": 2,
+  "needsErrorInfo": false,
+  "onClick": "{{\nPromise.all([\n\n    ObtenerNCImpresion.run(),\n\n    ObtenerFactAfectadaNCImpresion.run()\n\n])\n\n.then(async () => {\n\n    await storeValue(\n        \"ncImpresion\",\n        ObtenerNCImpresion.data[0]\n    );\n\n    await storeValue(\n        \"fcAfectadaNCImpresion\",\n        ObtenerFactAfectadaNCImpresion.data\n    );\n\n    download(\n\n        JS_ImpresionNC.generarHTMLNC(),\n\n        ObtenerNCImpresion.data[0]\n            .numero_nota_credito\n        +\n        \".html\",\n\n        \"text/html\"\n\n    );\n\n    showAlert(\n        \"Nota de crédito descargada correctamente\",\n        \"success\"\n    );\n\n});\n}}",
+  "parentColumnSpace": 19.625,
+  "parentId": "y6n4wpqb1d",
+  "parentRowSpace": 10,
+  "placement": "CENTER",
+  "recaptchaType": "V3",
+  "renderMode": "CANVAS",
+  "resetFormOnClick": false,
+  "responsiveBehavior": "hug",
+  "rightColumn": 61,
+  "text": "Imprimir NC",
+  "tooltip": "{{\n!tblConsultaNC.selectedRow?.id_nota_credito\n?\n\"Debe seleccionar una nota de crédito en la tabla\"\n:\n\"\"\n}}",
+  "topRow": 16,
+  "type": "BUTTON_WIDGET",
+  "version": 1,
+  "widgetId": "hkc52iiuip",
+  "widgetName": "btImprimirNC2"
+}

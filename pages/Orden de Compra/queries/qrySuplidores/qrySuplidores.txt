@@ -1,0 +1,6 @@
+SELECT
+    id_suplidor,
+    razon_social
+FROM suplidores
+WHERE estado = 'ACTIVO'
+ORDER BY razon_social;

@@ -1,0 +1,16 @@
+EXEC dbo.sp_nc_anular
+
+    @id_nota_credito =
+    {{tblConsultaNC.selectedRow.id_nota_credito}},
+
+    @clave_anulacion =
+    {{inpClaveAnulacionNC.text}},
+
+    @razon_anulacion =
+    {{inpRazonAnulacionNC.text}},
+
+    @usuario_evento =
+    {{appsmith.user.email}},
+
+    @equipo =
+    'Appsmith';

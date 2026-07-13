@@ -1,0 +1,66 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 7,
+  "boxShadow": "0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)",
+  "buttonColor": "#ef4444",
+  "buttonVariant": "PRIMARY",
+  "disabledWhenInvalid": false,
+  "dynamicBindingPathList": [
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "isDisabled"
+    },
+    {
+      "key": "tooltip"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "onClick"
+    },
+    {
+      "key": "isDisabled"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "iconAlign": "left",
+  "iconName": "delete",
+  "isDefaultClickDisabled": true,
+  "isDisabled": "{{\n!tblConsultaAV.selectedRow?.id_avance ||\ntblConsultaAV.selectedRow.estado === \"REVERSADO\"\n}}",
+  "isLoading": false,
+  "isVisible": true,
+  "key": "er3pbx7rzn",
+  "leftColumn": 50,
+  "minWidth": 120,
+  "mobileBottomRow": 28,
+  "mobileLeftColumn": 43,
+  "mobileRightColumn": 59,
+  "mobileTopRow": 24,
+  "needsErrorInfo": false,
+  "onClick": "{{\nPromise.all([\n\n    resetWidget(\"inpClaveReversionAV\", true),\n    resetWidget(\"inpMotivoReversionAV\", true)\n\n])\n\n.then(() => {\n\n    showModal(\"mdlReversarAV\");\n\n});\n}}",
+  "originalBottomRow": 164,
+  "originalTopRow": 159,
+  "parentColumnSpace": 19.625,
+  "parentId": "1xfgvv95zr",
+  "parentRowSpace": 10,
+  "placement": "CENTER",
+  "recaptchaType": "V3",
+  "renderMode": "CANVAS",
+  "resetFormOnClick": false,
+  "responsiveBehavior": "hug",
+  "rightColumn": 64,
+  "text": "Reversar Avance",
+  "tooltip": "{{\n!tblConsultaAV.selectedRow?.id_avance\n    ? \"Seleccione un Avance para reversar.\"\n    : tblConsultaAV.selectedRow.estado === \"REVERSADO\"\n        ? \"Este Avance ya fue reversado.\"\n        : \"\"\n}}",
+  "topRow": 2,
+  "type": "BUTTON_WIDGET",
+  "version": 1,
+  "widgetId": "5ce98wct3z",
+  "widgetName": "btnAnularAV"
+}

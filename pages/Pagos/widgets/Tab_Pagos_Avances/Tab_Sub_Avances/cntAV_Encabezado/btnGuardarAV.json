@@ -1,0 +1,69 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 62,
+  "boxShadow": "0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)",
+  "buttonColor": "{{\nappsmith.store.modoAV === \"MODIFICAR\"\n    ? \"#f59e0b\"\n    : \"#22c55e\"\n}}",
+  "buttonVariant": "PRIMARY",
+  "disabledWhenInvalid": false,
+  "dynamicBindingPathList": [
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "text"
+    },
+    {
+      "key": "buttonColor"
+    },
+    {
+      "key": "iconName"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "onClick"
+    },
+    {
+      "key": "buttonColor"
+    },
+    {
+      "key": "iconName"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "iconAlign": "left",
+  "iconName": "{{\nappsmith.store.modoAV === \"MODIFICAR\"\n    ? \"edit\"\n    : \"floppy-disk\"\n}}",
+  "isDefaultClickDisabled": true,
+  "isDisabled": false,
+  "isLoading": false,
+  "isVisible": true,
+  "key": "o310wqau8h",
+  "leftColumn": 40,
+  "minWidth": 120,
+  "mobileBottomRow": 59,
+  "mobileLeftColumn": 40,
+  "mobileRightColumn": 56,
+  "mobileTopRow": 55,
+  "needsErrorInfo": false,
+  "onClick": "{{\n(() => {\n\n    // ==========================\n    // VALIDAR TIPOS DE RETENCIÓN\n    // ==========================\n\n    if (\n        Number((inpRetencionItbisAV.text || \"0\").replace(/,/g,\"\")) > 0 &&\n        !selTipoRetITBIS_AV.selectedOptionValue\n    ) {\n        showAlert(\"Debe seleccionar el tipo de retención de ITBIS.\", \"warning\");\n        return;\n    }\n\n    if (\n        Number((inpRetencionDGIIAV.text || \"0\").replace(/,/g,\"\")) > 0 &&\n        !selTipoRetDGII_AV.selectedOptionValue\n    ) {\n        showAlert(\"Debe seleccionar el tipo de retención de DGII.\", \"warning\");\n        return;\n    }\n\n    if (\n        Number((inpRetencionGarantiaAV.text || \"0\").replace(/,/g,\"\")) > 0 &&\n        !selTipoRetGarantiaAV.selectedOptionValue\n    ) {\n        showAlert(\"Debe seleccionar el tipo de retención de Garantía.\", \"warning\");\n        return;\n    }\n\n    if (\n        Number((inpRetencionTSS_AV.text || \"0\").replace(/,/g,\"\")) > 0 &&\n        !selTipoRetTSS_AV.selectedOptionValue\n    ) {\n        showAlert(\"Debe seleccionar el tipo de retención de TSS.\", \"warning\");\n        return;\n    }\n\n    // ==========================\n    // MODIFICAR\n    // ==========================\n\n    if (appsmith.store.modoAV === \"MODIFICAR\") {\n\n        qryAVModificar.run()\n\n        .then(() => {\n\n            showAlert(\n                \"Avance modificado correctamente.\",\n                \"success\"\n            );\n\n            return JS_AV.nuevo();\n\n        })\n\n        .catch((e) => {\n\n            showAlert(\n                e.message,\n                \"error\"\n            );\n\n        });\n\n        return;\n\n    }\n\n    // ==========================\n    // CREAR\n    // ==========================\n\n    qryAVGuardar.run()\n\n    .then(() => {\n\n        return storeValue(\n            \"idAVImpresion\",\n            qryAVGuardar.data[0].id_avance\n        );\n\n    })\n\n    .then(() => {\n\n        return storeValue(\n            \"ultimoAVCreado\",\n            qryAVGuardar.data[0].numero_avance\n        );\n\n    })\n\n    .then(() => {\n\n        showAlert(\n            \"Avance creado correctamente.\",\n            \"success\"\n        );\n\n        return JS_AV.nuevo();\n\n    })\n\n    .catch((e) => {\n\n        showAlert(\n            e.message,\n            \"error\"\n        );\n\n    });\n\n})();\n}}",
+  "parentColumnSpace": 19.3125,
+  "parentId": "09p72t8ya1",
+  "parentRowSpace": 10,
+  "placement": "CENTER",
+  "recaptchaType": "V3",
+  "renderMode": "CANVAS",
+  "resetFormOnClick": false,
+  "responsiveBehavior": "hug",
+  "rightColumn": 56,
+  "text": "{{\nappsmith.store.modoAV === \"MODIFICAR\"\n    ? \"Modificar Avance\"\n    : \"Guardar Avance\"\n}}",
+  "topRow": 55,
+  "type": "BUTTON_WIDGET",
+  "version": 1,
+  "widgetId": "gau0usk0bk",
+  "widgetName": "btnGuardarAV"
+}

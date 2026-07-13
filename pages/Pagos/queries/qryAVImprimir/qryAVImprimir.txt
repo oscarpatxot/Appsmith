@@ -1,0 +1,3 @@
+SELECT *
+FROM vw_avances
+WHERE id_avance = {{ appsmith.store.idAVImpresion }}

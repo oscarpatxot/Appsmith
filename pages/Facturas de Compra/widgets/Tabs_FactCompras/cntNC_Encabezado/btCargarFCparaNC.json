@@ -1,0 +1,64 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 7,
+  "boxShadow": "0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)",
+  "buttonColor": "#22c55e",
+  "buttonVariant": "PRIMARY",
+  "disabledWhenInvalid": false,
+  "dynamicBindingPathList": [
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "isDisabled"
+    },
+    {
+      "key": "tooltip"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "onClick"
+    },
+    {
+      "key": "isDisabled"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "iconAlign": "left",
+  "iconName": "add",
+  "isDefaultClickDisabled": true,
+  "isDisabled": "{{\nappsmith.store.modoNC === \"MODIFICAR\"\n}}",
+  "isLoading": false,
+  "isVisible": true,
+  "key": "1oj6t2b4qz",
+  "leftColumn": 8,
+  "minWidth": 120,
+  "mobileBottomRow": 5,
+  "mobileLeftColumn": 9,
+  "mobileRightColumn": 25,
+  "mobileTopRow": 1,
+  "needsErrorInfo": false,
+  "onClick": "{{\nqryNCBuscarFactura.run()\n\n.then(() => {\n\n    storeValue(\n        \"facturaAfectadaNC\",\n        qryNCBuscarFactura.data[0]\n    );\n\n    storeValue(\n        \"facturaNCCargada\",\n        true\n    );\n\n    inpID_FC.setValue(\"\");\n\n});\n}}",
+  "parentColumnSpace": 19.625,
+  "parentId": "ffs7wvbj4s",
+  "parentRowSpace": 10,
+  "placement": "CENTER",
+  "recaptchaType": "V3",
+  "renderMode": "CANVAS",
+  "resetFormOnClick": false,
+  "responsiveBehavior": "hug",
+  "rightColumn": 16,
+  "text": "Cargar FC",
+  "tooltip": "{{\nappsmith.store.modoNC === \"MODIFICAR\"\n?\n\"Presione 'Nueva NC' para salir del modo modificación\"\n:\n\"Cargar factura afectada\"\n}}",
+  "topRow": 2,
+  "type": "BUTTON_WIDGET",
+  "version": 1,
+  "widgetId": "0gx62h2eb4",
+  "widgetName": "btCargarFCparaNC"
+}

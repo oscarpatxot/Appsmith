@@ -1,0 +1,16 @@
+EXEC dbo.sp_aplicaciones_nc_consultar
+
+    @id_detalle_nc_aplicada =
+        {{ Number(inpID_ANCF_Consulta.text) || null }},
+
+    @fecha_desde =
+        {{ dpDesdeConsultaANCF.selectedDate || null }},
+
+    @fecha_hasta =
+        {{ dpHastaConsultaANCF.selectedDate || null }},
+
+    @id_proyecto =
+        {{ Number(selProyectoConsultaANCF.selectedOptionValue) || null }},
+
+    @id_suplidor =
+        {{ Number(selSuplidorConsultaANCF.selectedOptionValue) || null }};

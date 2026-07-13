@@ -1,0 +1,3 @@
+EXEC dbo.sp_nc_obtener
+    @id_nota_credito =
+        {{tblConsultaNC.selectedRow.id_nota_credito}};

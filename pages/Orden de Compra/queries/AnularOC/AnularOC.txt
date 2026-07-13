@@ -1,0 +1,16 @@
+EXEC dbo.sp_anular_orden_compra
+
+    @id_orden_compra =
+        {{tblOCConsulta.selectedRow.id_orden_compra}},
+
+    @clave_anulacion =
+        '{{inpClaveAnulacion.text}}',
+
+    @razon_anulacion =
+        '{{txtRazonAnulacion.text}}',
+
+    @usuario_evento =
+        '{{appsmith.user.email}}',
+
+    @equipo =
+        'Appsmith';

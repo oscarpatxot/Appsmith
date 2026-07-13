@@ -1,0 +1,44 @@
+EXEC dbo.sp_sp_modificar
+
+@id_solicitud_pago =
+    {{ inpID_SP.text }},
+
+    @id_suplidor = {{ selSuplidorSP.selectedOptionValue }},
+    @id_proyecto = {{ selProyectoSP.selectedOptionValue }},
+
+    @fecha_solicitud = '{{ moment(dpFechaSP.selectedDate).format("YYYY-MM-DD") }}',
+   @concepto = {{ inpConceptoSP.text || null }},
+
+    @retencion_itbis_posible =
+        {{ Number((inpRetIbisSP.text || "0").replace(/,/g,'')) }},
+
+    @retencion_dgii_posible =
+        {{ Number((inpRetDGIISP.text || "0").replace(/,/g,'')) }},
+
+    @retencion_garantia_posible =
+        {{ Number((inpRetGarantiaSP.text || "0").replace(/,/g,'')) }},
+
+    @retencion_tss_posible =
+        {{ Number((inpRetTSSSP.text || "0").replace(/,/g,'')) }},
+
+    @otra_moneda =
+        {{ Number(selOtraMonedaSP.selectedOptionValue || 0) }},
+
+    @id_moneda_otra_moneda =
+        {{ Number(selOtraMonedaCodigoSP.selectedOptionValue || 0) }},
+
+@tasa_pago_otra_moneda =
+{{
+  inpTasaOtraMoneda.text
+    ? Number(inpTasaOtraMoneda.text)
+    : null
+}},
+
+   @usuario_evento =
+    '{{ appsmith.user.email || "Appsmith" }}',
+
+    @equipo =
+        'Appsmith',
+
+    @json_detalle =
+        '{{ JS_SP.obtenerDetalleJSON() }}';

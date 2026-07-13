@@ -1,0 +1,5 @@
+SELECT
+    nombre AS label,
+    id_tipo_gasto AS value
+FROM tipo_gasto
+ORDER BY id_tipo_gasto;

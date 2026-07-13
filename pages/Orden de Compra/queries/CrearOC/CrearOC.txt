@@ -1,0 +1,17 @@
+EXEC dbo.sp_crear_orden_compra
+
+    @fecha_orden = '{{moment(dpFecha.selectedDate).format("YYYY-MM-DD")}}',
+    @id_suplidor = {{selSuplidor.selectedOptionValue}},
+    @id_proyecto = {{selProyecto.selectedOptionValue}},
+    @id_moneda = {{selMoneda.selectedOptionValue}},
+
+    @cotizacion = '{{inpCotizacion.text}}',
+    @comentarios = '{{txtComentarios.text}}',
+
+    @descuento = {{Number(inpDescuento.text || 0)}},
+    @porcentaje_itbis = {{Number(selITBIS.selectedOptionValue)}},
+
+    @usuario_evento = '{{appsmith.user.email}}',
+    @equipo = 'Appsmith',
+
+   @json_detalle = '{{JSON.stringify(appsmith.store.detalleOC)}}';

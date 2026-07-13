@@ -1,0 +1,67 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 31,
+  "boxShadow": "none",
+  "defaultOptionValue": "{{ ((options, serverSideFiltering) => ( \nappsmith.store.modoAV === \"MODIFICAR\"\n  ? appsmith.store.encabezadoAV?.id_tipo_retencion_garantia\n  : null\n))(selTipoRetGarantiaAV.options, selTipoRetGarantiaAV.serverSideFiltering) }}",
+  "dynamicBindingPathList": [
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "sourceData"
+    },
+    {
+      "key": "defaultOptionValue"
+    }
+  ],
+  "dynamicHeight": "FIXED",
+  "dynamicPropertyPathList": [
+    {
+      "key": "sourceData"
+    }
+  ],
+  "dynamicTriggerPathList": [],
+  "isDisabled": false,
+  "isFilterable": true,
+  "isLoading": false,
+  "isRequired": false,
+  "isVisible": true,
+  "key": "3g5yh8ry2q",
+  "labelAlignment": "left",
+  "labelPosition": "Top",
+  "labelText": "Tipo de retención Garantía",
+  "labelTextSize": "0.875rem",
+  "labelWidth": 5,
+  "leftColumn": 30,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "minWidth": 450,
+  "mobileBottomRow": 38,
+  "mobileLeftColumn": 31,
+  "mobileRightColumn": 51,
+  "mobileTopRow": 31,
+  "needsErrorInfo": false,
+  "optionLabel": "nombre",
+  "optionValue": "id_tipo_retencion",
+  "originalBottomRow": 122,
+  "originalTopRow": 115,
+  "parentColumnSpace": 19.3125,
+  "parentId": "09p72t8ya1",
+  "parentRowSpace": 10,
+  "placeholderText": "Sin retención de Garantía",
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 40,
+  "serverSideFiltering": false,
+  "sourceData": "{{\n[\n  {\n    id_tipo_retencion: null,\n    nombre: \"Sin retención de Garantía\"\n  },\n  ...qryTipoRetencionGARANTIA.data\n]\n}}",
+  "topRow": 24,
+  "type": "SELECT_WIDGET",
+  "version": 1,
+  "widgetId": "9rps7wx6yk",
+  "widgetName": "selTipoRetGarantiaAV"
+}

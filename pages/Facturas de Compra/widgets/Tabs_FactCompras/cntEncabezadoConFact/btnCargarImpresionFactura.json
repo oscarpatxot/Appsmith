@@ -1,0 +1,64 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 21,
+  "boxShadow": "0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)",
+  "buttonColor": "#dbeafe",
+  "buttonVariant": "PRIMARY",
+  "disabledWhenInvalid": false,
+  "dynamicBindingPathList": [
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "tooltip"
+    },
+    {
+      "key": "isDisabled"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "onClick"
+    },
+    {
+      "key": "isDisabled"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "iconAlign": "left",
+  "iconName": "document-open",
+  "isDefaultClickDisabled": true,
+  "isDisabled": "{{\n!tblFCConsulta.selectedRow?.id_factura_compra\n}}",
+  "isLoading": false,
+  "isVisible": false,
+  "key": "er3pbx7rzn",
+  "leftColumn": 52,
+  "minWidth": 120,
+  "mobileBottomRow": 14,
+  "mobileLeftColumn": 44,
+  "mobileRightColumn": 60,
+  "mobileTopRow": 10,
+  "needsErrorInfo": false,
+  "onClick": "{{\nPromise.all([\n    ObtenerFCImpresionConsulta.run(),\n    ObtenerDetalleFCImpConsulta.run()\n])\n.then(async () => {\n\n    await storeValue(\n        \"fcImpresion\",\n        ObtenerFCImpresionConsulta.data[0]\n    );\n\n    await storeValue(\n        \"detalleFCImpresion\",\n        ObtenerDetalleFCImpConsulta.data\n    );\n\n    showAlert(\n        \"Factura cargada para impresión\",\n        \"success\"\n    );\n\n});\n}}",
+  "parentColumnSpace": 19.625,
+  "parentId": "zj1i7dbkt8",
+  "parentRowSpace": 10,
+  "placement": "CENTER",
+  "recaptchaType": "V3",
+  "renderMode": "CANVAS",
+  "resetFormOnClick": false,
+  "responsiveBehavior": "hug",
+  "rightColumn": 60,
+  "text": "Visualizar FC",
+  "tooltip": "{{\n!tblFCConsulta.selectedRow?.id_factura_compra\n?\n\"Debe seleccionar una factura en la tabla\"\n:\n\"\"\n}}",
+  "topRow": 16,
+  "type": "BUTTON_WIDGET",
+  "version": 1,
+  "widgetId": "zb11kbxtdl",
+  "widgetName": "btnCargarImpresionFactura"
+}

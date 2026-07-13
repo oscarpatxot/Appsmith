@@ -1,0 +1,10 @@
+EXEC dbo.sp_sp_anular
+
+    @id_solicitud_pago =
+        {{ tblConsultaSP.selectedRow.id_solicitud_pago }},
+
+    @usuario_evento =
+        '{{ appsmith.user.email || "Appsmith" }}',
+
+    @equipo =
+        'Appsmith';

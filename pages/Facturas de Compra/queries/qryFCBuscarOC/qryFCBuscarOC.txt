@@ -1,0 +1,2 @@
+EXEC dbo.sp_fc_buscar_oc
+    @id_orden_compra = {{ Number(inpIDOrdenCompra.text) }}

@@ -1,0 +1,54 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 7,
+  "boxShadow": "none",
+  "buttonColor": "#22c55e",
+  "buttonVariant": "PRIMARY",
+  "disabledWhenInvalid": false,
+  "dynamicBindingPathList": [
+    {
+      "key": "borderRadius"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "iconAlign": "left",
+  "iconName": "floppy-disk",
+  "isDefaultClickDisabled": true,
+  "isDisabled": false,
+  "isLoading": false,
+  "isVisible": true,
+  "key": "o310wqau8h",
+  "leftColumn": 9,
+  "minWidth": 120,
+  "mobileBottomRow": 6,
+  "mobileLeftColumn": 9,
+  "mobileRightColumn": 25,
+  "mobileTopRow": 2,
+  "needsErrorInfo": false,
+  "onClick": "{{\n(() => {\n\n    if (!inpID_Avance_AAF.text) {\n        showAlert(\"Debe indicar el ID del Avance.\", \"warning\");\n        return;\n    }\n\n    if (!inpID_FC_AAF.text) {\n        showAlert(\"Debe indicar el ID de la Factura.\", \"warning\");\n        return;\n    }\n\n    if (\n        Number((inpMontoAplicadoAAF.text || \"0\").replace(/,/g,\"\")) <= 0\n    ) {\n        showAlert(\"Debe indicar un monto válido.\", \"warning\");\n        return;\n    }\n\n    qryAAFAplicar.run()\n\n    .then(() =>\n\n        Promise.all([\n\n            resetWidget(\"inpID_Avance_AAF\", true),\n            resetWidget(\"inpID_FC_AAF\", true),\n            resetWidget(\"inpMontoAplicadoAAF\", true)\n\n        ])\n\n    )\n\n    .then(() => {\n\n        showAlert(\n            \"Avance aplicado correctamente.\",\n            \"success\"\n        );\n\n    })\n\n    .catch((e) => {\n\n        showAlert(\n            e.message,\n            \"error\"\n        );\n\n    });\n\n})()\n}}",
+  "parentColumnSpace": 19.3125,
+  "parentId": "369160bgvs",
+  "parentRowSpace": 10,
+  "placement": "CENTER",
+  "recaptchaType": "V3",
+  "renderMode": "CANVAS",
+  "resetFormOnClick": false,
+  "responsiveBehavior": "hug",
+  "rightColumn": 21,
+  "text": "Guardar Aplicación",
+  "topRow": 0,
+  "type": "BUTTON_WIDGET",
+  "version": 1,
+  "widgetId": "ja231a2dlf",
+  "widgetName": "btnGuardarAAF"
+}

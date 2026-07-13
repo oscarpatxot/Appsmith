@@ -1,0 +1,19 @@
+EXEC dbo.sp_sp_consultar
+
+    @id_solicitud_pago =
+        {{ inpID_SP_Consulta.text || null }},
+
+    @estado =
+        {{ selEstadoConsultaSP.selectedOptionValue || null }},
+
+    @id_proyecto =
+        {{ selProyectoConsultaSP.selectedOptionValue || null }},
+
+    @id_suplidor =
+        {{ selSuplidorConsultaSP.selectedOptionValue || null }},
+
+    @fecha_desde =
+        {{ dpDesdeConsultaSP.selectedDate ? moment(dpDesdeConsultaSP.selectedDate).format('YYYY-MM-DD') : null }},
+
+    @fecha_hasta =
+        {{ dpHastaConsultaSP.selectedDate ? moment(dpHastaConsultaSP.selectedDate).format('YYYY-MM-DD') : null }}

@@ -1,0 +1,71 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 44,
+  "boxShadow": "0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)",
+  "buttonColor": "{{\nappsmith.store.modoSA === \"MODIFICAR\"\n    ? \"#f59e0b\"\n    : \"#22c55e\"\n}}",
+  "buttonVariant": "PRIMARY",
+  "disabledWhenInvalid": false,
+  "dynamicBindingPathList": [
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "text"
+    },
+    {
+      "key": "buttonColor"
+    },
+    {
+      "key": "iconName"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "onClick"
+    },
+    {
+      "key": "buttonColor"
+    },
+    {
+      "key": "iconName"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "iconAlign": "left",
+  "iconName": "{{\nappsmith.store.modoSA === \"MODIFICAR\"\n    ? \"edit\"\n    : \"floppy-disk\"\n}}",
+  "isDefaultClickDisabled": true,
+  "isDisabled": false,
+  "isLoading": false,
+  "isVisible": true,
+  "key": "e90yarhr9x",
+  "leftColumn": 47,
+  "minWidth": 120,
+  "mobileBottomRow": 48,
+  "mobileLeftColumn": 46,
+  "mobileRightColumn": 62,
+  "mobileTopRow": 44,
+  "needsErrorInfo": false,
+  "onClick": "{{\nappsmith.store.modoSA === \"MODIFICAR\"\n\n? qrySAModificar.run(\n\n() => {\n\n    storeValue(\"ultimaSATrabajada\", qrySAModificar.data[0].numero_solicitud_avance);\n\n    storeValue(\"idUltimaSATrabajada\", qrySAModificar.data[0].id_solicitud_avance);\n\n    storeValue(\"idSAActual\", null);\n\n    storeValue(\"modoSA\", \"CREACION\");\n\n    storeValue(\"ocSAActual\", null);\n\n    storeValue(\"saActual\", null);\n\n    resetWidget(\"inpIdOCllamar\");\n\n    resetWidget(\"inpObservacionSA\");\n\n    resetWidget(\"inpMontoSolicitadoSA\");\n\n    resetWidget(\"selOtraMonedaSA\");\n    resetWidget(\"inpTasaOtraMonedaSA\");\n    resetWidget(\"selOtraMonedaCodigoSA\");\n\n    resetWidget(\"inpRetIbisSA\");\n    resetWidget(\"inpRetDGIISA\");\n    resetWidget(\"inpRetGarantiaSA\");\n    resetWidget(\"inpRetTSSSA\");\n\n    showAlert(\n        \"Solicitud de Avance modificada correctamente.\",\n        \"success\"\n    );\n\n},\n\n(error) => {\n\n    showAlert(error.message, \"error\");\n\n}\n\n)\n\n: qrySACrear.run(\n\n() => {\n\n    storeValue(\"ultimaSATrabajada\", qrySACrear.data[0].numero_solicitud_avance);\n\n    storeValue(\"idUltimaSATrabajada\", qrySACrear.data[0].id_solicitud_avance);\n\n    storeValue(\"idSAActual\", null);\n\n    storeValue(\"modoSA\", \"CREACION\");\n\n    storeValue(\"ocSAActual\", null);\n\n    storeValue(\"saActual\", null);\n\n    resetWidget(\"inpIdOCllamar\");\n\n    resetWidget(\"inpObservacionSA\");\n\n    resetWidget(\"inpMontoSolicitadoSA\");\n\n    resetWidget(\"selOtraMonedaSA\");\n    resetWidget(\"inpTasaOtraMonedaSA\");\n    resetWidget(\"selOtraMonedaCodigoSA\");\n\n    resetWidget(\"inpRetIbisSA\");\n    resetWidget(\"inpRetDGIISA\");\n    resetWidget(\"inpRetGarantiaSA\");\n    resetWidget(\"inpRetTSSSA\");\n\n    showAlert(\n        \"Solicitud de Avance creada correctamente.\",\n        \"success\"\n    );\n\n},\n\n(error) => {\n\n    showAlert(error.message, \"error\");\n\n}\n\n)\n\n}}",
+  "originalBottomRow": 92,
+  "originalTopRow": 85,
+  "parentColumnSpace": 19.3125,
+  "parentId": "a7f8ergc4r",
+  "parentRowSpace": 10,
+  "placement": "CENTER",
+  "recaptchaType": "V3",
+  "renderMode": "CANVAS",
+  "resetFormOnClick": false,
+  "responsiveBehavior": "hug",
+  "rightColumn": 63,
+  "text": "{{\nappsmith.store.modoSA === \"MODIFICAR\"\n    ? \"Modificar\"\n    : \"Guardar\"\n}}",
+  "topRow": 37,
+  "type": "BUTTON_WIDGET",
+  "version": 1,
+  "widgetId": "gy00mnk50v",
+  "widgetName": "btnGuardarSA"
+}

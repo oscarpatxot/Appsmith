@@ -1,0 +1,19 @@
+EXEC dbo.sp_buscar_orden_compra
+
+    @id_orden_compra =
+        {{ inpIdOCConsulta.text ? Number(inpIdOCConsulta.text) : null }},
+
+    @id_proyecto =
+        {{ selProyectoConsulta.selectedOptionValue ? Number(selProyectoConsulta.selectedOptionValue) : null }},
+
+    @id_suplidor =
+        {{ selSuplidorConsulta.selectedOptionValue ? Number(selSuplidorConsulta.selectedOptionValue) : null }},
+
+    @estado =
+        {{ selEstadoConsulta.selectedOptionValue || null }},
+
+    @fecha_desde =
+        {{ dpDesdeConsulta.selectedDate || null }},
+
+    @fecha_hasta =
+        {{ dpHastaConsulta.selectedDate || null }}

@@ -1,0 +1,4 @@
+EXEC sp_cuenta_suplidor_consultar
+
+    @id_suplidor =
+        {{ selSuplidorCtas.selectedOptionValue }}

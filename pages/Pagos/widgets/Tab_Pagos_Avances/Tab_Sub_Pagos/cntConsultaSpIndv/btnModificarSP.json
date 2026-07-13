@@ -1,0 +1,66 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 29,
+  "boxShadow": "0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)",
+  "buttonColor": "#eab308",
+  "buttonVariant": "PRIMARY",
+  "disabledWhenInvalid": false,
+  "dynamicBindingPathList": [
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "isDisabled"
+    },
+    {
+      "key": "tooltip"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "onClick"
+    },
+    {
+      "key": "isDisabled"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "iconAlign": "left",
+  "iconName": "edit",
+  "isDefaultClickDisabled": true,
+  "isDisabled": "{{\n\n!tblConsultaSP.selectedRow.id_solicitud_pago ||\n\ntblConsultaSP.selectedRow.estado === \"ANULADA\" ||\n\ntblConsultaSP.selectedRow.estado === \"PAGADA\"\n\n}}",
+  "isLoading": false,
+  "isVisible": true,
+  "key": "er3pbx7rzn",
+  "leftColumn": 48,
+  "minWidth": 120,
+  "mobileBottomRow": 17,
+  "mobileLeftColumn": 44,
+  "mobileRightColumn": 60,
+  "mobileTopRow": 13,
+  "needsErrorInfo": false,
+  "onClick": "{{\nstoreValue(\n  \"idSPModificar\",\n  tblConsultaSP.selectedRow.id_solicitud_pago\n)\n.then(() =>\n  storeValue(\n    \"modoSP\",\n    \"MODIFICAR\"\n  )\n)\n.then(() =>\n  JS_SP.cargarModificar()\n)\n}}",
+  "originalBottomRow": 166,
+  "originalTopRow": 161,
+  "parentColumnSpace": 19.625,
+  "parentId": "gl3y8epq7m",
+  "parentRowSpace": 10,
+  "placement": "CENTER",
+  "recaptchaType": "V3",
+  "renderMode": "CANVAS",
+  "resetFormOnClick": false,
+  "responsiveBehavior": "hug",
+  "rightColumn": 62,
+  "text": "Modificar",
+  "tooltip": "{{\n!tblConsultaSP.selectedRow.id_solicitud_pago\n  ? \"Seleccione una solicitud\"\n  : tblConsultaSP.selectedRow.estado === \"ANULADA\"\n    ? \"La solicitud ya está anulada\"\n    : tblConsultaSP.selectedRow.estado === \"PAGADA\"\n      ? \"No se puede modificar una solicitud pagada\"\n      : \"\"\n}}",
+  "topRow": 24,
+  "type": "BUTTON_WIDGET",
+  "version": 1,
+  "widgetId": "622z5xuqj9",
+  "widgetName": "btnModificarSP"
+}

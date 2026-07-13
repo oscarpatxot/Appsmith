@@ -1,0 +1,28 @@
+EXEC dbo.sp_fc_crear
+
+    @id_suplidor = {{selSuplidor.selectedOptionValue}},
+    @id_proyecto = {{selProyecto.selectedOptionValue}},
+
+    @numero_factura = {{inpNumeroFactura.text}},
+
+    @fecha_factura = {{dpFecha.selectedDate}},
+    @fecha_vencimiento = {{dpVence.selectedDate}},
+
+    @subtotal_gravado = {{Number(inpSubtotalGravado.text || 0)}},
+    @descuento_total = {{Number(inpDescuento.text || 0)}},
+    @subtotal_exento = {{Number(inpSubtotalNoGravado.text || 0)}},
+    @monto_itbis = {{Number(inpITBIS.text || 0)}},
+    @monto_total = {{Number(inpTotal.text || 0)}},
+
+    @porcentaje_itbis = {{Number(selPorcentajeItbis.selectedOptionValue || 0)}},
+
+    @comentarios = {{inpComentario.text || null}},
+    @ncf = {{inpNCF.text || null}},
+    @codigo_seguridad = {{inpCodigoSeguridad.text || null}},
+
+    @id_moneda = {{selMoneda.selectedOptionValue}},
+
+    @usuario_evento = {{appsmith.user.email}},
+    @equipo = 'Appsmith',
+
+    @json_detalle = '{{JSON.stringify(appsmith.store.detalleFactura)}}'

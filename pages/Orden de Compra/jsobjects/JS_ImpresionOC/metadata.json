@@ -1,0 +1,11 @@
+{
+  "gitSyncId": "6a305ee872f7e0c05b308cca_6a7d4fff-4e52-4ce6-9e4b-af0c583c9f82",
+  "id": "Orden de Compra_JS_ImpresionOC",
+  "unpublishedCollection": {
+    "name": "JS_ImpresionOC",
+    "pageId": "Orden de Compra",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "variables": []
+  }
+}

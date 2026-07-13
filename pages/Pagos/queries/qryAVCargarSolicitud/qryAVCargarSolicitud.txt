@@ -1,0 +1,2 @@
+EXEC sp_avance_cargar_solicitud
+    {{ Number(inpLlamarSA.text) }}

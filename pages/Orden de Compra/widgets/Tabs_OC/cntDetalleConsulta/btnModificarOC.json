@@ -1,0 +1,64 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 15,
+  "boxShadow": "0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)",
+  "buttonColor": "#eab308",
+  "buttonVariant": "PRIMARY",
+  "disabledWhenInvalid": false,
+  "dynamicBindingPathList": [
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "isDisabled"
+    },
+    {
+      "key": "tooltip"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "onClick"
+    },
+    {
+      "key": "isDisabled"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "iconAlign": "left",
+  "iconName": "edit",
+  "isDefaultClickDisabled": true,
+  "isDisabled": "{{\n!tblOCConsulta.selectedRow?.id_orden_compra\n||\ntblOCConsulta.selectedRow.estado === \"ANULADA\"\n||\ntblOCConsulta.selectedRow.estado === \"CERRADA\"\n}}",
+  "isLoading": false,
+  "isVisible": true,
+  "key": "dq5t1jzfzb",
+  "leftColumn": 43,
+  "minWidth": 120,
+  "mobileBottomRow": 15,
+  "mobileLeftColumn": 43,
+  "mobileRightColumn": 59,
+  "mobileTopRow": 11,
+  "needsErrorInfo": false,
+  "onClick": "{{JS_OC.prepararModificarOC()}}",
+  "parentColumnSpace": 19.625,
+  "parentId": "fsu5c4c8ms",
+  "parentRowSpace": 10,
+  "placement": "CENTER",
+  "recaptchaType": "V3",
+  "renderMode": "CANVAS",
+  "resetFormOnClick": false,
+  "responsiveBehavior": "hug",
+  "rightColumn": 59,
+  "text": "Modificar",
+  "tooltip": "{{\n!tblOCConsulta.selectedRow?.id_orden_compra\n    ? \"Debe seleccionar una Orden de Compra\"\n    : tblOCConsulta.selectedRow.estado === \"ANULADA\"\n    ? \"No se puede modificar una orden anulada\"\n    : tblOCConsulta.selectedRow.estado === \"CERRADA\"\n    ? \"No se puede modificar una orden cerrada\"\n    : \"\"\n}}",
+  "topRow": 11,
+  "type": "BUTTON_WIDGET",
+  "version": 1,
+  "widgetId": "yevid984j8",
+  "widgetName": "btnModificarOC"
+}

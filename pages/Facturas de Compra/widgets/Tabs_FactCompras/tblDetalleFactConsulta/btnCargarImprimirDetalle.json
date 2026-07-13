@@ -1,0 +1,64 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 7,
+  "boxShadow": "0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)",
+  "buttonColor": "#93c5fd",
+  "buttonVariant": "PRIMARY",
+  "disabledWhenInvalid": false,
+  "dynamicBindingPathList": [
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "isDisabled"
+    },
+    {
+      "key": "tooltip"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "onClick"
+    },
+    {
+      "key": "isDisabled"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "iconAlign": "left",
+  "iconName": "print",
+  "isDefaultClickDisabled": true,
+  "isDisabled": "{{\n!tblFCConsulta.selectedRow?.id_factura_compra\n}}",
+  "isLoading": false,
+  "isVisible": true,
+  "key": "er3pbx7rzn",
+  "leftColumn": 43,
+  "minWidth": 120,
+  "mobileBottomRow": 6,
+  "mobileLeftColumn": 45,
+  "mobileRightColumn": 61,
+  "mobileTopRow": 2,
+  "needsErrorInfo": false,
+  "onClick": "{{\nPromise.all([\n\n    ObtenerFCImpresionConsulta.run(),\n    ObtenerDetalleFCImpConsulta.run()\n\n])\n\n.then(async () => {\n\n    await storeValue(\n        \"fcImpresion\",\n        ObtenerFCImpresionConsulta.data[0]\n    );\n\n    await storeValue(\n        \"detalleFCImpresion\",\n        ObtenerDetalleFCImpConsulta.data\n    );\n\n    download(\n        JS_ImpresionFC.generarHTMLFC(),\n        \"FC-\" +\n        String(\n            ObtenerFCImpresionConsulta.data[0].id_factura_compra\n        ).padStart(6, \"0\")\n        +\n        \".html\",\n        \"text/html\"\n    );\n\n    showAlert(\n        \"Factura descargada correctamente\",\n        \"success\"\n    );\n\n});\n}}",
+  "parentColumnSpace": 19.625,
+  "parentId": "fsq0acc2fo",
+  "parentRowSpace": 10,
+  "placement": "CENTER",
+  "recaptchaType": "V3",
+  "renderMode": "CANVAS",
+  "resetFormOnClick": false,
+  "responsiveBehavior": "hug",
+  "rightColumn": 61,
+  "text": "Imprimir FC",
+  "tooltip": "{{\n!tblFCConsulta.selectedRow?.id_factura_compra\n?\n\"Debe seleccionar una factura en la tabla\"\n:\n\"\"\n}}",
+  "topRow": 2,
+  "type": "BUTTON_WIDGET",
+  "version": 1,
+  "widgetId": "c97m9r43sb",
+  "widgetName": "btnCargarImprimirDetalle"
+}

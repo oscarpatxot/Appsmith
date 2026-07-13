@@ -1,0 +1,64 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 42,
+  "boxShadow": "0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)",
+  "buttonColor": "#ef4444",
+  "buttonVariant": "PRIMARY",
+  "disabledWhenInvalid": false,
+  "dynamicBindingPathList": [
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "isDisabled"
+    },
+    {
+      "key": "tooltip"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "onClick"
+    },
+    {
+      "key": "isDisabled"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "iconAlign": "left",
+  "iconName": "delete",
+  "isDefaultClickDisabled": true,
+  "isDisabled": "{{\n!tblConsultaNC.selectedRow?.id_nota_credito\n}}",
+  "isLoading": false,
+  "isVisible": true,
+  "key": "er3pbx7rzn",
+  "leftColumn": 43,
+  "minWidth": 120,
+  "mobileBottomRow": 28,
+  "mobileLeftColumn": 43,
+  "mobileRightColumn": 59,
+  "mobileTopRow": 24,
+  "needsErrorInfo": false,
+  "onClick": "{{\nshowModal('mdlAnularNC')\n}}",
+  "parentColumnSpace": 19.625,
+  "parentId": "y6n4wpqb1d",
+  "parentRowSpace": 10,
+  "placement": "CENTER",
+  "recaptchaType": "V3",
+  "renderMode": "CANVAS",
+  "resetFormOnClick": false,
+  "responsiveBehavior": "hug",
+  "rightColumn": 61,
+  "text": "Anular NC",
+  "tooltip": "{{\n!tblConsultaNC.selectedRow?.id_nota_credito\n?\n\"Debe seleccionar una nota de crédito en la tabla\"\n:\n\"\"\n}}",
+  "topRow": 37,
+  "type": "BUTTON_WIDGET",
+  "version": 1,
+  "widgetId": "7uxro2skm5",
+  "widgetName": "btnAnularNC"
+}

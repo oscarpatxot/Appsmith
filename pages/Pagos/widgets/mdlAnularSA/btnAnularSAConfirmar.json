@@ -1,0 +1,51 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 22,
+  "boxShadow": "none",
+  "buttonColor": "#ef4444",
+  "buttonStyle": "PRIMARY_BUTTON",
+  "buttonVariant": "PRIMARY",
+  "disabledWhenInvalid": false,
+  "dynamicBindingPathList": [
+    {
+      "key": "borderRadius"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "isDefaultClickDisabled": true,
+  "isDisabled": false,
+  "isLoading": false,
+  "isVisible": true,
+  "key": "qlvm62c56g",
+  "leftColumn": 47,
+  "minWidth": 120,
+  "mobileBottomRow": 22,
+  "mobileLeftColumn": 47,
+  "mobileRightColumn": 63,
+  "mobileTopRow": 18,
+  "needsErrorInfo": false,
+  "onClick": "{{\nqryValidarClaveAnulacionSA.run(\n\n() => {\n\n    if (qryValidarClaveAnulacionSA.data[0].clave_valida == 0) {\n\n        showAlert(\n            \"Clave incorrecta.\",\n            \"error\"\n        );\n\n        return;\n\n    }\n\n    qrySAAnular.run(\n\n        () => {\n\n                        closeModal(\"mdlAnularSA\");\n\n            resetWidget(\"inpClaveAnularSA\");\n\n            qrySAConsultar.run();\n\n            storeValue(\"saActual\", null);\n\n            storeValue(\"idSAActual\", null);\n\n            storeValue(\"modoSA\", \"CREACION\");\n\n            showAlert(\n                \"Solicitud de Avance anulada correctamente.\",\n                \"success\"\n            );\n\n        },\n\n        (error) => {\n\n            showAlert(\n                error.message,\n                \"error\"\n            );\n\n        }\n\n    );\n\n},\n\n(error) => {\n\n    showAlert(\n        error.message,\n        \"error\"\n    );\n\n}\n\n)\n}}",
+  "parentId": "f9qnktj48z",
+  "placement": "CENTER",
+  "recaptchaType": "V3",
+  "renderMode": "CANVAS",
+  "resetFormOnClick": false,
+  "responsiveBehavior": "hug",
+  "rightColumn": 63,
+  "text": "Anular",
+  "topRow": 18,
+  "type": "BUTTON_WIDGET",
+  "version": 1,
+  "widgetId": "eyfbeqpmja",
+  "widgetName": "btnAnularSAConfirmar"
+}

@@ -1,0 +1,57 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 27,
+  "boxShadow": "none",
+  "buttonColor": "#ef4444",
+  "buttonStyle": "PRIMARY_BUTTON",
+  "buttonVariant": "PRIMARY",
+  "disabledWhenInvalid": false,
+  "dynamicBindingPathList": [
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "isDisabled"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "onClick"
+    },
+    {
+      "key": "isDisabled"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "isDefaultClickDisabled": true,
+  "isDisabled": "{{\n!(inpClaveReversionAV.text || \"\").trim() ||\n!(inpMotivoReversionAV.text || \"\").trim()\n}}",
+  "isLoading": false,
+  "isVisible": true,
+  "key": "o310wqau8h",
+  "leftColumn": 47,
+  "minWidth": 120,
+  "mobileBottomRow": 22,
+  "mobileLeftColumn": 47,
+  "mobileRightColumn": 63,
+  "mobileTopRow": 18,
+  "needsErrorInfo": false,
+  "onClick": "{{\nqryAVValidarClaveAnulacion.run()\n\n.then(() => {\n\n    if (\n        qryAVValidarClaveAnulacion.data[0].clave_valida == 0\n    ) {\n\n        showAlert(\n            \"Clave de anulación incorrecta.\",\n            \"error\"\n        );\n\n        return;\n\n    }\n\n    return qryAVReversar.run();\n\n})\n\n.then(() => {\n\n    showAlert(\n        \"Avance reversado correctamente.\",\n        \"success\"\n    );\n\n    closeModal(\"mdlReversarAV\");\n\n    return qryConsultaAV.run();\n\n})\n\n.catch((e) => {\n\n    showAlert(\n        e.message,\n        \"error\"\n    );\n\n});\n}}",
+  "parentId": "aooh56jnt3",
+  "placement": "CENTER",
+  "recaptchaType": "V3",
+  "renderMode": "CANVAS",
+  "resetFormOnClick": false,
+  "responsiveBehavior": "hug",
+  "rightColumn": 63,
+  "text": "Reversar",
+  "topRow": 23,
+  "type": "BUTTON_WIDGET",
+  "version": 1,
+  "widgetId": "4h0ecbsr97",
+  "widgetName": "btnConfirmarReversoAV"
+}

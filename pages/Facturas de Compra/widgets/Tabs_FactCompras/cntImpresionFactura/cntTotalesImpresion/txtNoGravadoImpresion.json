@@ -1,0 +1,55 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 16,
+  "dynamicBindingPathList": [
+    {
+      "key": "truncateButtonColor"
+    },
+    {
+      "key": "fontFamily"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "text"
+    }
+  ],
+  "dynamicHeight": "AUTO_HEIGHT",
+  "dynamicTriggerPathList": [],
+  "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
+  "fontSize": "1rem",
+  "fontStyle": "",
+  "isLoading": false,
+  "isVisible": true,
+  "key": "myawkllv3b",
+  "leftColumn": 28,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "minWidth": 450,
+  "mobileBottomRow": 16,
+  "mobileLeftColumn": 28,
+  "mobileRightColumn": 44,
+  "mobileTopRow": 12,
+  "needsErrorInfo": false,
+  "originalBottomRow": 17,
+  "originalTopRow": 12,
+  "overflow": "NONE",
+  "parentColumnSpace": 7.046875,
+  "parentId": "fucg8mgavu",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 46,
+  "shouldTruncate": false,
+  "text": "{{\nNumber(appsmith.store.fcImpresion?.subtotal_exento || 0) === 0\n    ? \"-\"\n    : Number(\n        appsmith.store.fcImpresion?.subtotal_exento\n      ).toLocaleString(undefined,{\n        minimumFractionDigits: 2,\n        maximumFractionDigits: 2\n      })\n}}",
+  "textAlign": "RIGHT",
+  "textColor": "#231F20",
+  "topRow": 12,
+  "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
+  "type": "TEXT_WIDGET",
+  "version": 1,
+  "widgetId": "gas0uoffnh",
+  "widgetName": "txtNoGravadoImpresion"
+}

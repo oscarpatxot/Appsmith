@@ -1,0 +1,33 @@
+EXEC dbo.sp_sa_consultar
+
+    @id_solicitud_avance =
+        {{
+            inpID_SA_Consulta.text
+                ? Number(inpID_SA_Consulta.text)
+                : null
+        }},
+
+    @estado =
+        {{
+            selEstadoConsultaSA.selectedOptionValue || null
+        }},
+
+    @id_proyecto =
+        {{
+            selProyectoConsultaSA.selectedOptionValue
+                ? Number(selProyectoConsultaSA.selectedOptionValue)
+                : null
+        }},
+
+    @id_suplidor =
+        {{
+            selSuplidorConsultaSA.selectedOptionValue
+                ? Number(selSuplidorConsultaSA.selectedOptionValue)
+                : null
+        }},
+
+    @fecha_desde =
+        '{{ moment(dpDesdeConsultaSA.selectedDate).format("YYYY-MM-DD") }}',
+
+    @fecha_hasta =
+        '{{ moment(dpHastaConsultaSA.selectedDate).format("YYYY-MM-DD") }}';

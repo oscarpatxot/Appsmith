@@ -1,0 +1,16 @@
+EXEC dbo.sp_aplicaciones_avance_consultar
+
+    @id_detalle =
+        {{ Number(inpID_AAF.text) || null }},
+
+    @fecha_desde =
+        {{ dpDesdeConsultaAAF.selectedDate || null }},
+
+    @fecha_hasta =
+        {{ dpHastaConsultaAAF.selectedDate || null }},
+
+    @id_proyecto =
+        {{ Number(selProyectoConsultaAAF.selectedOptionValue) || null }},
+
+    @id_suplidor =
+        {{ Number(selSuplidorConsultaAAF.selectedOptionValue) || null }};

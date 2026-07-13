@@ -1,0 +1,8 @@
+EXEC dbo.sp_nc_imprimir
+
+    @id_nota_credito =
+    {{
+        appsmith.store.idNCImpresion
+        ||
+        tblConsultaNC.selectedRow.id_nota_credito
+    }};

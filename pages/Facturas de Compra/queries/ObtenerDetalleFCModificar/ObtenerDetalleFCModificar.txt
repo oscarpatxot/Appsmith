@@ -1,0 +1,3 @@
+EXEC dbo.sp_fc_obtener_detalle_modificar
+    @id_factura_compra =
+    {{tblFCConsulta.selectedRow.id_factura_compra}}
