@@ -1,17 +1,19 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 9,
-  "boxShadow": "none",
-  "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+  "bottomRow": 11,
+  "boxShadow": "0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)",
+  "buttonColor": "#eab308",
   "buttonVariant": "PRIMARY",
   "disabledWhenInvalid": false,
   "dynamicBindingPathList": [
     {
-      "key": "buttonColor"
-    },
-    {
       "key": "borderRadius"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "onClick"
     }
   ],
   "dynamicTriggerPathList": [
@@ -20,20 +22,20 @@
     }
   ],
   "iconAlign": "left",
-  "iconName": "refresh",
+  "iconName": "edit",
   "isDefaultClickDisabled": true,
   "isDisabled": false,
   "isLoading": false,
   "isVisible": true,
   "key": "x6lucbxgtf",
-  "leftColumn": 2,
+  "leftColumn": 52,
   "minWidth": 120,
-  "mobileBottomRow": 11,
-  "mobileLeftColumn": 0,
-  "mobileRightColumn": 16,
-  "mobileTopRow": 7,
+  "mobileBottomRow": 21,
+  "mobileLeftColumn": 41,
+  "mobileRightColumn": 57,
+  "mobileTopRow": 17,
   "needsErrorInfo": false,
-  "onClick": "{{qryLogSeguimiento.run()}}",
+  "onClick": "{{JS_LOG.actualizar()}}",
   "parentColumnSpace": 19.625,
   "parentId": "u2jg7j8x02",
   "parentRowSpace": 10,
@@ -42,11 +44,11 @@
   "renderMode": "CANVAS",
   "resetFormOnClick": false,
   "responsiveBehavior": "hug",
-  "rightColumn": 14,
-  "text": "Refrescar Tabla",
-  "topRow": 5,
+  "rightColumn": 62,
+  "text": "Actualizar Logística",
+  "topRow": 3,
   "type": "BUTTON_WIDGET",
   "version": 1,
-  "widgetId": "19cclfaqdh",
-  "widgetName": "btnRefrescarTabla"
+  "widgetId": "1ehxjzmkdb",
+  "widgetName": "btnActualizarLog"
 }

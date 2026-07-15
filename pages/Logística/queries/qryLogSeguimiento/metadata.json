@@ -1,6 +1,6 @@
 {
   "gitSyncId": "6a305ee872f7e0c05b308cca_70966166-9073-4433-b7b8-274fd4d21fd2",
-  "id": "Logística_qryTablaSeguimientoLog",
+  "id": "Logística_qryLogSeguimiento",
   "pluginId": "mssql-plugin",
   "pluginType": "DB",
   "unpublishedAction": {
@@ -23,7 +23,7 @@
       "pluginId": "mssql-plugin"
     },
     "dynamicBindingPathList": [],
-    "name": "qryTablaSeguimientoLog",
+    "name": "qryLogSeguimiento",
     "pageId": "Logística",
     "runBehaviour": "AUTOMATIC",
     "userSetOnLoad": true

@@ -1,0 +1,17 @@
+EXEC dbo.sp_logistica_actualizar_documento
+
+    @id = {{tblSeguimientoLogistico.selectedRow.id}},
+
+    @fecha_envio_documento = {{dpFechaEnvioAct.selectedDate}},
+
+    @pagado = {{Number(selPagadoCreditoAct.selectedOptionValue)}},
+
+    @fecha_pagado = {{dpFechaPagadoAct.selectedDate}},
+
+    @entregado = {{Number(selEntregadoAct.selectedOptionValue)}},
+
+    @fecha_entregado = {{dpFechaEntregadoAct.selectedDate}},
+
+    @usuario_evento = {{appsmith.user.email}},
+
+    @equipo = 'Appsmith';
