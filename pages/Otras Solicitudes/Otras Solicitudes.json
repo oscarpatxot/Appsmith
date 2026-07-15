@@ -6,7 +6,7 @@
       {
         "dsl": {
           "backgroundColor": "none",
-          "bottomRow": 1290,
+          "bottomRow": 1250,
           "canExtend": true,
           "containerStyle": "none",
           "detachFromLayout": true,

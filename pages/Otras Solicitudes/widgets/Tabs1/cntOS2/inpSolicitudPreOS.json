@@ -3,7 +3,7 @@
   "animateLoading": true,
   "autoFocus": false,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 86,
+  "bottomRow": 79,
   "boxShadow": "none",
   "defaultText": "{{\nappsmith.store.osSeguimiento?.solicitud || \"\"\n}}",
   "dynamicBindingPathList": [

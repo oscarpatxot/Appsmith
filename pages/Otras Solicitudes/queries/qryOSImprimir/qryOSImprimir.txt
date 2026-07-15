@@ -1,0 +1,7 @@
+SELECT *
+
+FROM vw_otras_solicitudes
+
+WHERE
+    id_otras_solicitudes =
+        {{appsmith.store.idOSImpresion}};
