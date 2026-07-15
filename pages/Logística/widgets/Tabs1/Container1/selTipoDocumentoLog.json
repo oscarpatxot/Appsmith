@@ -1,0 +1,64 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 14,
+  "boxShadow": "none",
+  "defaultOptionValue": "",
+  "dynamicBindingPathList": [
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "sourceData"
+    }
+  ],
+  "dynamicHeight": "FIXED",
+  "dynamicPropertyPathList": [
+    {
+      "key": "sourceData"
+    }
+  ],
+  "dynamicTriggerPathList": [],
+  "isDisabled": false,
+  "isFilterable": true,
+  "isLoading": false,
+  "isRequired": false,
+  "isVisible": true,
+  "key": "20abr82pi1",
+  "labelAlignment": "left",
+  "labelPosition": "Top",
+  "labelText": "Tipo de documento",
+  "labelTextSize": "0.875rem",
+  "labelWidth": 5,
+  "leftColumn": 7,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "minWidth": 450,
+  "mobileBottomRow": 9,
+  "mobileLeftColumn": 0,
+  "mobileRightColumn": 20,
+  "mobileTopRow": 2,
+  "needsErrorInfo": false,
+  "optionLabel": "label",
+  "optionValue": "value",
+  "originalBottomRow": 15,
+  "originalTopRow": 8,
+  "parentColumnSpace": 19.625,
+  "parentId": "1dxenkm94s",
+  "parentRowSpace": 10,
+  "placeholderText": "Select option",
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 20,
+  "serverSideFiltering": false,
+  "sourceData": "{{\n[\n  {\n    label: \"Orden de Compra\",\n    value: \"OC\"\n  },\n  {\n    label: \"Solicitud de pago\",\n    value: \"SP\"\n  },\n  {\n    label: \"Solicitud de Avance\",\n    value: \"SA\"\n  }\n]\n}}",
+  "topRow": 7,
+  "type": "SELECT_WIDGET",
+  "version": 1,
+  "widgetId": "2mypybn68k",
+  "widgetName": "selTipoDocumentoLog"
+}

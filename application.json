@@ -45,6 +45,10 @@
     {
       "id": "Otras Solicitudes",
       "isDefault": false
+    },
+    {
+      "id": "Logística",
+      "isDefault": false
     }
   ],
   "unpublishedApplicationDetail": {
