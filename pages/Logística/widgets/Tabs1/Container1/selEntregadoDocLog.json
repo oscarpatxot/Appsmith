@@ -4,10 +4,7 @@
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "bottomRow": 33,
   "boxShadow": "none",
-  "closeOnSelection": true,
-  "dateFormat": "DD/MM/YYYY",
-  "datePickerType": "DATE_PICKER",
-  "defaultDate": "{{\nselTipoDocumentoLog.selectedOptionValue === \"OC\"\n    ? moment()\n    : undefined\n}}",
+  "defaultOptionValue": "{{ ((options, serverSideFiltering) => ( 0))(selEntregadoDocLog.options, selEntregadoDocLog.serverSideFiltering) }}",
   "dynamicBindingPathList": [
     {
       "key": "accentColor"
@@ -16,51 +13,55 @@
       "key": "borderRadius"
     },
     {
-      "key": "defaultDate"
+      "key": "sourceData"
+    },
+    {
+      "key": "defaultOptionValue"
     }
   ],
   "dynamicHeight": "FIXED",
   "dynamicPropertyPathList": [
     {
-      "key": "defaultDate"
+      "key": "sourceData"
     }
   ],
   "dynamicTriggerPathList": [],
-  "firstDayOfWeek": 0,
   "isDisabled": false,
+  "isFilterable": true,
   "isLoading": false,
   "isRequired": false,
   "isVisible": true,
-  "key": "yt6cpm6w2c",
-  "label": "Fecha envío de documento",
+  "key": "20abr82pi1",
   "labelAlignment": "left",
   "labelPosition": "Top",
+  "labelText": "Entregado",
   "labelTextSize": "0.875rem",
   "labelWidth": 5,
-  "leftColumn": 0,
-  "maxDate": "2121-12-31T18:29:00.000Z",
+  "leftColumn": 24,
   "maxDynamicHeight": 9000,
-  "minDate": "1920-12-31T18:30:00.000Z",
   "minDynamicHeight": 4,
   "minWidth": 450,
-  "mobileBottomRow": 33,
-  "mobileLeftColumn": 0,
-  "mobileRightColumn": 20,
-  "mobileTopRow": 26,
+  "mobileBottomRow": 40,
+  "mobileLeftColumn": 12,
+  "mobileRightColumn": 32,
+  "mobileTopRow": 33,
   "needsErrorInfo": false,
+  "optionLabel": "label",
+  "optionValue": "value",
   "originalBottomRow": 35,
   "originalTopRow": 28,
   "parentColumnSpace": 19.625,
   "parentId": "1dxenkm94s",
   "parentRowSpace": 10,
+  "placeholderText": "Select option",
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 10,
-  "shortcuts": false,
-  "timePrecision": "minute",
+  "rightColumn": 34,
+  "serverSideFiltering": false,
+  "sourceData": "{{\n[\n  {\n    label: \"Sí\",\n    value: 1\n  },\n  {\n    label: \"No\",\n    value: 0\n  }\n]\n}}",
   "topRow": 26,
-  "type": "DATE_PICKER_WIDGET2",
-  "version": 2,
-  "widgetId": "1qhjqgqow1",
-  "widgetName": "dpFechaEnvio1DocLog"
+  "type": "SELECT_WIDGET",
+  "version": 1,
+  "widgetId": "v4bd8btfx8",
+  "widgetName": "selEntregadoDocLog"
 }

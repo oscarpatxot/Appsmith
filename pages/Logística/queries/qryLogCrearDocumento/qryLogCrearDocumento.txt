@@ -1,0 +1,29 @@
+EXEC sp_logistica_crear_documento
+
+@id_tipo_logistica = {{tblDocumentoLog.selectedRow.id_tipo_documento}},
+@numero_documento = {{tblDocumentoLog.selectedRow.numero_documento}},
+
+@referencia = {{inpReferenciaDocLog.text}},
+@comentarios = {{inpComentariosDocLog.text}},
+
+@id_proyecto = {{tblDocumentoLog.selectedRow.id_proyecto}},
+@nombre_proyecto = {{tblDocumentoLog.selectedRow.nombre_proyecto}},
+
+@id_suplidor = {{tblDocumentoLog.selectedRow.id_suplidor}}, 
+@razon_social = {{tblDocumentoLog.selectedRow.razon_social}},
+
+@fecha_envio_documento = {{dpFechaEnvio1DocLog.selectedDate}},
+
+@pagado = {{Number(selPagadoCreditoDocLog.selectedOptionValue)}},
+
+@fecha_pagado = {{dpFechaPagadoCreditoDocLog.selectedDate}},
+
+@entregado = {{Number(selEntregadoDocLog.selectedOptionValue)}},
+
+@fecha_entregado = {{dpEntregadoDocLog.selectedDate}},
+
+@monto = {{Number(tblDocumentoLog.selectedRow.monto)}}, 
+@id_moneda = {{tblDocumentoLog.selectedRow.id_moneda}}, 
+@codigo_iso = {{tblDocumentoLog.selectedRow.codigo_iso}}, 
+@usuario_evento = {{appsmith.user.email}}, 
+@equipo = 'Appsmith';

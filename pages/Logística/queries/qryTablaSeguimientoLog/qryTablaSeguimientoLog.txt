@@ -1,0 +1,4 @@
+SELECT *
+FROM vw_documentos_logistica_seguimiento
+WHERE NOT (pagado = 1 AND entregado = 1)
+ORDER BY fecha_envio_documento;

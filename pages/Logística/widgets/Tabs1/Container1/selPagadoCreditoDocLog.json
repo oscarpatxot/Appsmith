@@ -4,13 +4,19 @@
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "bottomRow": 33,
   "boxShadow": "none",
-  "defaultOptionValue": "GREEN",
+  "defaultOptionValue": "{{ ((options, serverSideFiltering) => ( \nselTipoDocumentoLog.selectedOptionValue === \"OC\"\n    ? 1\n    : 0\n))(selPagadoCreditoDocLog.options, selPagadoCreditoDocLog.serverSideFiltering) }}",
   "dynamicBindingPathList": [
     {
       "key": "accentColor"
     },
     {
       "key": "borderRadius"
+    },
+    {
+      "key": "sourceData"
+    },
+    {
+      "key": "defaultOptionValue"
     }
   ],
   "dynamicHeight": "FIXED",
@@ -19,6 +25,7 @@
       "key": "sourceData"
     }
   ],
+  "dynamicTriggerPathList": [],
   "isDisabled": false,
   "isFilterable": true,
   "isLoading": false,
@@ -27,7 +34,7 @@
   "key": "20abr82pi1",
   "labelAlignment": "left",
   "labelPosition": "Top",
-  "labelText": "Label",
+  "labelText": "Pagado / A crédito",
   "labelTextSize": "0.875rem",
   "labelWidth": 5,
   "leftColumn": 12,
@@ -39,8 +46,10 @@
   "mobileRightColumn": 32,
   "mobileTopRow": 33,
   "needsErrorInfo": false,
-  "optionLabel": "name",
-  "optionValue": "code",
+  "optionLabel": "label",
+  "optionValue": "value",
+  "originalBottomRow": 35,
+  "originalTopRow": 28,
   "parentColumnSpace": 19.625,
   "parentId": "1dxenkm94s",
   "parentRowSpace": 10,
@@ -49,7 +58,7 @@
   "responsiveBehavior": "fill",
   "rightColumn": 22,
   "serverSideFiltering": false,
-  "sourceData": "[\n  {\n    \"name\": \"Blue\",\n    \"code\": \"BLUE\"\n  },\n  {\n    \"name\": \"Green\",\n    \"code\": \"GREEN\"\n  },\n  {\n    \"name\": \"Red\",\n    \"code\": \"RED\"\n  }\n]",
+  "sourceData": "{{\n[\n  {\n    label: \"Sí\",\n    value: 1\n  },\n  {\n    label: \"No\",\n    value: 0\n  }\n]\n}}",
   "topRow": 26,
   "type": "SELECT_WIDGET",
   "version": 1,
