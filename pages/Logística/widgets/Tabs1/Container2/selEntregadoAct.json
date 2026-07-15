@@ -2,12 +2,9 @@
   "accentColor": "{{appsmith.theme.colors.primaryColor}}",
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 39,
+  "bottomRow": 7,
   "boxShadow": "none",
-  "closeOnSelection": true,
-  "dateFormat": "DD/MM/YYYY",
-  "datePickerType": "DATE_PICKER",
-  "defaultDate": "{{\nNumber(selEntregadoDocLog.selectedOptionValue) === 1\n    ? moment()\n    : undefined\n}}",
+  "defaultOptionValue": "{{ ((options, serverSideFiltering) => ( \nNumber(tblSeguimientoLogistico.selectedRow.entregado) || 0\n))(selEntregadoAct.options, selEntregadoAct.serverSideFiltering) }}",
   "dynamicBindingPathList": [
     {
       "key": "accentColor"
@@ -16,51 +13,53 @@
       "key": "borderRadius"
     },
     {
-      "key": "defaultDate"
+      "key": "sourceData"
+    },
+    {
+      "key": "defaultOptionValue"
     }
   ],
   "dynamicHeight": "FIXED",
   "dynamicPropertyPathList": [
     {
-      "key": "defaultDate"
+      "key": "sourceData"
     }
   ],
   "dynamicTriggerPathList": [],
-  "firstDayOfWeek": 0,
   "isDisabled": false,
+  "isFilterable": true,
   "isLoading": false,
   "isRequired": false,
   "isVisible": true,
-  "key": "yt6cpm6w2c",
-  "label": "Fecha entregado",
+  "key": "20abr82pi1",
   "labelAlignment": "left",
   "labelPosition": "Top",
+  "labelText": "Entregado",
   "labelTextSize": "0.875rem",
   "labelWidth": 5,
   "leftColumn": 41,
-  "maxDate": "2121-12-31T18:29:00.000Z",
   "maxDynamicHeight": 9000,
-  "minDate": "1920-12-31T18:30:00.000Z",
   "minDynamicHeight": 4,
   "minWidth": 450,
-  "mobileBottomRow": 40,
+  "mobileBottomRow": 12,
   "mobileLeftColumn": 24,
   "mobileRightColumn": 44,
-  "mobileTopRow": 33,
+  "mobileTopRow": 5,
   "needsErrorInfo": false,
-  "originalBottomRow": 42,
-  "originalTopRow": 35,
+  "optionLabel": "label",
+  "optionValue": "value",
   "parentColumnSpace": 19.625,
-  "parentId": "1dxenkm94s",
+  "parentId": "u2jg7j8x02",
   "parentRowSpace": 10,
+  "placeholderText": "Select option",
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
   "rightColumn": 51,
-  "shortcuts": false,
-  "timePrecision": "minute",
-  "topRow": 32,
-  "type": "DATE_PICKER_WIDGET2",
-  "version": 2,
-  "widgetId": "6vihhewvze",
-  "widgetName": "dpEntregadoDocLog"
+  "serverSideFiltering": false,
+  "sourceData": "{{\n[\n  {\n    label: \"Sí\",\n    value: 1\n  },\n  {\n    label: \"No\",\n    value: 0\n  }\n]\n}}",
+  "topRow": 0,
+  "type": "SELECT_WIDGET",
+  "version": 1,
+  "widgetId": "7th9bfmx3d",
+  "widgetName": "selEntregadoAct"
 }

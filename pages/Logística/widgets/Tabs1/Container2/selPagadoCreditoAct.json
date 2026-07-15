@@ -2,9 +2,9 @@
   "accentColor": "{{appsmith.theme.colors.primaryColor}}",
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 32,
+  "bottomRow": 7,
   "boxShadow": "none",
-  "defaultOptionValue": "{{ ((options, serverSideFiltering) => ( \nselTipoDocumentoLog.selectedOptionValue === \"OC\"\n    ? 1\n    : 0\n))(selPagadoCreditoDocLog.options, selPagadoCreditoDocLog.serverSideFiltering) }}",
+  "defaultOptionValue": "{{ ((options, serverSideFiltering) => ( \nNumber(tblSeguimientoLogistico.selectedRow.pagado) || 0\n))(selPagadoCreditoAct.options, selPagadoCreditoAct.serverSideFiltering) }}",
   "dynamicBindingPathList": [
     {
       "key": "accentColor"
@@ -41,17 +41,15 @@
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,
-  "mobileBottomRow": 40,
+  "mobileBottomRow": 11,
   "mobileLeftColumn": 12,
   "mobileRightColumn": 32,
-  "mobileTopRow": 33,
+  "mobileTopRow": 4,
   "needsErrorInfo": false,
   "optionLabel": "label",
   "optionValue": "value",
-  "originalBottomRow": 35,
-  "originalTopRow": 28,
   "parentColumnSpace": 19.625,
-  "parentId": "1dxenkm94s",
+  "parentId": "u2jg7j8x02",
   "parentRowSpace": 10,
   "placeholderText": "Select option",
   "renderMode": "CANVAS",
@@ -59,9 +57,9 @@
   "rightColumn": 39,
   "serverSideFiltering": false,
   "sourceData": "{{\n[\n  {\n    label: \"Sí\",\n    value: 1\n  },\n  {\n    label: \"No\",\n    value: 0\n  }\n]\n}}",
-  "topRow": 25,
+  "topRow": 0,
   "type": "SELECT_WIDGET",
   "version": 1,
-  "widgetId": "ocfik0m39s",
-  "widgetName": "selPagadoCreditoDocLog"
+  "widgetId": "l4ymubw8v2",
+  "widgetName": "selPagadoCreditoAct"
 }

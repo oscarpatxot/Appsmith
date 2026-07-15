@@ -1,29 +1,37 @@
-EXEC sp_logistica_crear_documento
+EXEC dbo.sp_logistica_crear_documento
 
-@id_tipo_logistica = {{tblDocumentoLog.selectedRow.id_tipo_documento}},
-@numero_documento = {{tblDocumentoLog.selectedRow.numero_documento}},
+    @id_tipo_logistica = {{tblDocumentoLog.selectedRow.id_tipo_documento}},
 
-@referencia = {{inpReferenciaDocLog.text}},
-@comentarios = {{inpComentariosDocLog.text}},
+    @numero_documento = {{tblDocumentoLog.selectedRow.numero_documento}},
 
-@id_proyecto = {{tblDocumentoLog.selectedRow.id_proyecto}},
-@nombre_proyecto = {{tblDocumentoLog.selectedRow.nombre_proyecto}},
+    @referencia = {{inpReferenciaDocLog.text}},
 
-@id_suplidor = {{tblDocumentoLog.selectedRow.id_suplidor}}, 
-@razon_social = {{tblDocumentoLog.selectedRow.razon_social}},
+    @comentarios = {{inpComentariosDocLog.text}},
 
-@fecha_envio_documento = {{dpFechaEnvio1DocLog.selectedDate}},
+    @id_proyecto = {{tblDocumentoLog.selectedRow.id_proyecto}},
 
-@pagado = {{Number(selPagadoCreditoDocLog.selectedOptionValue)}},
+    @nombre_proyecto = {{tblDocumentoLog.selectedRow.nombre_proyecto}},
 
-@fecha_pagado = {{dpFechaPagadoCreditoDocLog.selectedDate}},
+    @id_suplidor = {{tblDocumentoLog.selectedRow.id_suplidor}},
 
-@entregado = {{Number(selEntregadoDocLog.selectedOptionValue)}},
+    @razon_social = {{tblDocumentoLog.selectedRow.razon_social}},
 
-@fecha_entregado = {{dpEntregadoDocLog.selectedDate}},
+    @fecha_envio_documento = {{dpFechaEnvio1DocLog.selectedDate}},
 
-@monto = {{Number(tblDocumentoLog.selectedRow.monto)}}, 
-@id_moneda = {{tblDocumentoLog.selectedRow.id_moneda}}, 
-@codigo_iso = {{tblDocumentoLog.selectedRow.codigo_iso}}, 
-@usuario_evento = {{appsmith.user.email}}, 
-@equipo = 'Appsmith';
+    @pagado = {{Number(selPagadoCreditoDocLog.selectedOptionValue)}},
+
+    @fecha_pagado = {{dpFechaPagadoCreditoDocLog.selectedDate}},
+
+    @entregado = {{Number(selEntregadoDocLog.selectedOptionValue)}},
+
+    @fecha_entregado = {{dpEntregadoDocLog.selectedDate}},
+
+    @monto = {{Number(tblDocumentoLog.selectedRow.monto)}},
+
+    @id_moneda = {{tblDocumentoLog.selectedRow.id_moneda}},
+
+    @codigo_iso = {{tblDocumentoLog.selectedRow.codigo_iso}},
+
+    @usuario_evento = {{appsmith.user.email}},
+
+    @equipo = 'Appsmith';
