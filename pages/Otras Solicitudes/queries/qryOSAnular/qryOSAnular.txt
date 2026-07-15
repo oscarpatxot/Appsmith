@@ -1,0 +1,12 @@
+EXEC dbo.sp_otras_solicitudes_anular
+
+    @id_otras_solicitudes =
+        {{tblSeguimientoOS.selectedRow.id_otras_solicitudes}},
+
+    @motivo_anulacion =
+        {{inpMotivoAnulacionOS.text}},
+
+    @usuario_evento =
+        {{appsmith.user.email}},
+
+    @equipo = 'Appsmith';

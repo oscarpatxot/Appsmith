@@ -1,0 +1,17 @@
+SELECT *
+
+FROM otras_solicitudes
+
+WHERE
+
+    fecha_solicitud BETWEEN
+        {{dpDesdeConsultaOS.selectedDate}}
+    AND
+        {{dpHastaConsultaOS.selectedDate}}
+	--			and id_proyecto <> 5
+
+ORDER BY
+
+    fecha_solicitud DESC,
+
+    id_otras_solicitudes DESC;

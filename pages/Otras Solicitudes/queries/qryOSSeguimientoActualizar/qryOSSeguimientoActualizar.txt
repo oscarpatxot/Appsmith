@@ -1,0 +1,13 @@
+EXEC dbo.sp_otras_solicitudes_seguimiento
+
+    @id_otras_solicitudes = {{appsmith.store.osSeguimiento.id_otras_solicitudes}},
+
+    @fecha_enviado = {{dpFechaEnviadoOS.selectedDate}},
+
+    @completada = {{Number(selCompletadoOS.selectedOptionValue)}},
+
+    @fecha_completada = {{dpFechaCompletadoOS.selectedDate}},
+
+    @usuario_evento = {{appsmith.user.email}},
+
+    @equipo = 'Appsmith';

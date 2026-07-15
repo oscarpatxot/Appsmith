@@ -1,0 +1,6 @@
+SELECT
+    id_proyecto,
+    nombre_proyecto
+FROM proyectos
+--WHERE id_proyecto NOT IN (4)
+ORDER BY nombre_proyecto;

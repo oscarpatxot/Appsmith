@@ -1,0 +1,21 @@
+EXEC dbo.sp_otras_solicitudes_crear
+
+    @id_proyecto = {{selProyectoOS.selectedOptionValue}},
+
+    @id_suplidor = {{selSuplidoresOS.selectedOptionValue}},
+
+    @id_moneda = {{selMonedaOS.selectedOptionValue}},
+
+    @monto = {{Number(inpMontoOS.text.replace(/,/g,''))}},
+
+    @fecha_solicitud = {{dpFechaOS.selectedDate}},
+
+    @referencia = {{inpReferenciaOS.text}},
+
+    @solicitud = {{inpSolicitudOS.text}},
+
+    @comentario = {{inpComentarioOS.text}},
+
+    @usuario_evento = {{appsmith.user.email}},
+
+    @equipo = 'Appsmith';

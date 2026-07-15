@@ -41,6 +41,10 @@
     {
       "id": "Suplidores",
       "isDefault": false
+    },
+    {
+      "id": "Otras Solicitudes",
+      "isDefault": false
     }
   ],
   "unpublishedApplicationDetail": {
