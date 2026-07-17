@@ -7,7 +7,7 @@
   "closeOnSelection": true,
   "dateFormat": "DD/MM/YYYY",
   "datePickerType": "DATE_PICKER",
-  "defaultDate": "{{\ntblSeguimientoLogistico.selectedRow.fecha_entregado &&\ntblSeguimientoLogistico.selectedRow.fecha_entregado !== \"1900-01-01\"\n    ? tblSeguimientoLogistico.selectedRow.fecha_entregado\n    : undefined\n}}",
+  "defaultDate": "{{appsmith.store.fechaEntregadoAct}}",
   "dynamicBindingPathList": [
     {
       "key": "accentColor"

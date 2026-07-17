@@ -4,7 +4,7 @@
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "bottomRow": 74,
   "boxShadow": "none",
-  "defaultOptionValue": "{{ ((options, serverSideFiltering) => ( \nNumber(tblSeguimientoLogistico.selectedRow.pagado) || 0\n))(selPagadoCreditoAct.options, selPagadoCreditoAct.serverSideFiltering) }}",
+  "defaultOptionValue": "{{ ((options, serverSideFiltering) => ( appsmith.store.pagadoAct))(selPagadoCreditoAct.options, selPagadoCreditoAct.serverSideFiltering) }}",
   "dynamicBindingPathList": [
     {
       "key": "accentColor"

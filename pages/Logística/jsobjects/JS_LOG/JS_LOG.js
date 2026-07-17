@@ -8,6 +8,9 @@ export default {
       return;
     }
 
+    // Fecha de envío
+  
+
     // Fecha pagado
     if (
       Number(selPagadoCreditoDocLog.selectedOptionValue) === 1 &&
@@ -56,7 +59,7 @@ export default {
     resetWidget("inpReferenciaDocLog");
     resetWidget("inpComentariosDocLog");
 
-    resetWidget("dpFechaEnvio1DocLog");
+    resetWidget("dpFechaEnvioDocLog");
 
     resetWidget("selPagadoCreditoDocLog");
     resetWidget("dpFechaPagadoCreditoDocLog");
@@ -64,10 +67,8 @@ export default {
     resetWidget("selEntregadoDocLog");
     resetWidget("dpEntregadoDocLog");
 
-    // Limpiar tabla de búsqueda
     resetWidget("tblDocumentoLog");
 
-    // Refrescar seguimiento
     qryLogSeguimiento.run();
 
     if (mostrarMensaje) {
@@ -81,7 +82,6 @@ export default {
 
   async actualizar() {
 
-    // Documento seleccionado
     if (!tblSeguimientoLogistico.selectedRow.id) {
       showAlert(
         "Debe seleccionar un documento.",
@@ -89,6 +89,9 @@ export default {
       );
       return;
     }
+
+    // Fecha de envío
+
 
     // Fecha pagado
     if (

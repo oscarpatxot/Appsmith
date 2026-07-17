@@ -55,7 +55,7 @@
     "desembolso_otra_moneda",
     "comentarios"
   ],
-  "columnUpdatedAt": 1784149349244,
+  "columnUpdatedAt": 1784318046697,
   "columnWidthMap": {
     "codigo_iso": 94,
     "customColumn1": 128,
@@ -158,9 +158,16 @@
   "dynamicPropertyPathList": [
     {
       "key": "tableData"
+    },
+    {
+      "key": "onRowSelected"
     }
   ],
-  "dynamicTriggerPathList": [],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onRowSelected"
+    }
+  ],
   "enableClientSideSearch": true,
   "endOfData": false,
   "flexVerticalAlignment": "start",
@@ -183,6 +190,7 @@
   "mobileRightColumn": 34,
   "mobileTopRow": 5,
   "needsErrorInfo": false,
+  "onRowSelected": "storeValue(\"fechaEnvioAct\", tblSeguimientoLogistico.selectedRow.fecha_envio_documento);\nstoreValue(\"pagadoAct\", Number(tblSeguimientoLogistico.selectedRow.pagado));\nstoreValue(\"fechaPagadoAct\", tblSeguimientoLogistico.selectedRow.fecha_pagado);\nstoreValue(\"entregadoAct\", Number(tblSeguimientoLogistico.selectedRow.entregado));\nstoreValue(\"fechaEntregadoAct\", tblSeguimientoLogistico.selectedRow.fecha_entregado);",
   "parentColumnSpace": 19.625,
   "parentId": "u2jg7j8x02",
   "parentRowSpace": 10,
@@ -512,7 +520,7 @@
       "decimals": 0,
       "enableFilter": true,
       "enableSort": true,
-      "horizontalAlignment": "LEFT",
+      "horizontalAlignment": "CENTER",
       "id": "id",
       "index": 0,
       "isCellEditable": false,
@@ -522,8 +530,8 @@
       "isDiscardVisible": true,
       "isEditable": false,
       "isSaveVisible": true,
-      "isVisible": false,
-      "label": "id",
+      "isVisible": true,
+      "label": "ID",
       "notation": "standard",
       "originalId": "id",
       "sticky": "",

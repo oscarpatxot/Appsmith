@@ -4,7 +4,7 @@
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "bottomRow": 74,
   "boxShadow": "none",
-  "defaultOptionValue": "{{ ((options, serverSideFiltering) => ( \nNumber(tblSeguimientoLogistico.selectedRow.entregado) || 0\n))(selEntregadoAct.options, selEntregadoAct.serverSideFiltering) }}",
+  "defaultOptionValue": "{{ ((options, serverSideFiltering) => ( appsmith.store.entregadoAct))(selEntregadoAct.options, selEntregadoAct.serverSideFiltering) }}",
   "dynamicBindingPathList": [
     {
       "key": "accentColor"

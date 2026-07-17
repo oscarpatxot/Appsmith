@@ -16,7 +16,7 @@ EXEC dbo.sp_logistica_crear_documento
 
     @razon_social = {{tblDocumentoLog.selectedRow.razon_social}},
 
-    @fecha_envio_documento = {{dpFechaEnvio1DocLog.selectedDate}},
+    @fecha_envio_documento = {{dpFechaEnvioDocLog.selectedDate}},
 
     @pagado = {{Number(selPagadoCreditoDocLog.selectedOptionValue)}},
 

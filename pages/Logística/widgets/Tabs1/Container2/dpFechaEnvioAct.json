@@ -7,7 +7,7 @@
   "closeOnSelection": true,
   "dateFormat": "DD/MM/YYYY",
   "datePickerType": "DATE_PICKER",
-  "defaultDate": "{{\ntblSeguimientoLogistico.selectedRow.fecha_envio_documento || undefined\n}}",
+  "defaultDate": "{{appsmith.store.fechaEnvioAct}}",
   "dynamicBindingPathList": [
     {
       "key": "accentColor"
