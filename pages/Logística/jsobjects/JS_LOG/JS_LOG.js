@@ -20,7 +20,7 @@ export default {
     // Fecha entregado
     if (
       Number(selEntregadoDocLog.selectedOptionValue) === 1 &&
-      !dpFechaEntregadoDocLog.selectedDate
+      !dpEntregadoDocLog.selectedDate
     ) {
       showAlert("Debe indicar la fecha de entregado.", "warning");
       return;
