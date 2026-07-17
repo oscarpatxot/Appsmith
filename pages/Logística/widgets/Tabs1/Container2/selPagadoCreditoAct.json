@@ -2,7 +2,7 @@
   "accentColor": "{{appsmith.theme.colors.primaryColor}}",
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 7,
+  "bottomRow": 74,
   "boxShadow": "none",
   "defaultOptionValue": "{{ ((options, serverSideFiltering) => ( \nNumber(tblSeguimientoLogistico.selectedRow.pagado) || 0\n))(selPagadoCreditoAct.options, selPagadoCreditoAct.serverSideFiltering) }}",
   "dynamicBindingPathList": [
@@ -57,7 +57,7 @@
   "rightColumn": 39,
   "serverSideFiltering": false,
   "sourceData": "{{\n[\n  {\n    label: \"Sí\",\n    value: 1\n  },\n  {\n    label: \"No\",\n    value: 0\n  }\n]\n}}",
-  "topRow": 0,
+  "topRow": 67,
   "type": "SELECT_WIDGET",
   "version": 1,
   "widgetId": "l4ymubw8v2",
