@@ -2,7 +2,7 @@ export default {
 
     agregarLinea() {
 
-        if (appsmith.store.detalleFactura.length === 0) {
+   if ((appsmith.store.detalleFactura || []).length === 0) {
 
             selProyecto.setSelectedOption(qryFCBuscarOC.data[0].id_proyecto);
 
