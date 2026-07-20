@@ -1,5 +1,5 @@
 SELECT *
 FROM vw_notas_credito_disponibles
 WHERE disponible > 0
-  AND id_proyecto <> 5
+--  AND id_proyecto <> 5
 ORDER BY numero_nota_credito DESC;

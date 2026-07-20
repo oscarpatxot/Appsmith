@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT *\nFROM vw_notas_credito_disponibles\nWHERE disponible > 0\n  AND id_proyecto <> 5\nORDER BY numero_nota_credito DESC;",
+      "body": "SELECT *\nFROM vw_notas_credito_disponibles\nWHERE disponible > 0\n--  AND id_proyecto <> 5\nORDER BY numero_nota_credito DESC;",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
