@@ -190,7 +190,7 @@
   "mobileRightColumn": 34,
   "mobileTopRow": 5,
   "needsErrorInfo": false,
-  "onRowSelected": "storeValue(\"fechaEnvioAct\", tblSeguimientoLogistico.selectedRow.fecha_envio_documento);\nstoreValue(\"pagadoAct\", Number(tblSeguimientoLogistico.selectedRow.pagado));\nstoreValue(\"fechaPagadoAct\", tblSeguimientoLogistico.selectedRow.fecha_pagado);\nstoreValue(\"entregadoAct\", Number(tblSeguimientoLogistico.selectedRow.entregado));\nstoreValue(\"fechaEntregadoAct\", tblSeguimientoLogistico.selectedRow.fecha_entregado);",
+  "onRowSelected": "{{\n(async () => {\n\n  await storeValue(\"fechaEnvioAct\", tblSeguimientoLogistico.selectedRow.fecha_envio_documento);\n  await storeValue(\"pagadoAct\", Number(tblSeguimientoLogistico.selectedRow.pagado));\n  await storeValue(\"fechaPagadoAct\", tblSeguimientoLogistico.selectedRow.fecha_pagado);\n  await storeValue(\"entregadoAct\", Number(tblSeguimientoLogistico.selectedRow.entregado));\n  await storeValue(\"fechaEntregadoAct\", tblSeguimientoLogistico.selectedRow.fecha_entregado);\n\n})()\n}}",
   "parentColumnSpace": 19.625,
   "parentId": "u2jg7j8x02",
   "parentRowSpace": 10,
