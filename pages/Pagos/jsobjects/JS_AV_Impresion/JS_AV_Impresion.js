@@ -496,7 +496,7 @@ ${
 		"
 	>
 
-		${pa.observacion || "***"}
+		${av.observacion || "***"}
 
 	</div>
 
