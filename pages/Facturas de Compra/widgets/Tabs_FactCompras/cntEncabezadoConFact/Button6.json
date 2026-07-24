@@ -38,7 +38,7 @@
   "mobileRightColumn": 18,
   "mobileTopRow": 18,
   "needsErrorInfo": false,
-  "onClick": "{{\nPromise.all([\n\n    inpIDFactura.setValue(\"\"),\n\n    selProyectoConsulta.setSelectedOption(\"\"),\n    selSuplidorConsulta.setSelectedOption(\"\"),\n    selEstadoConsulta.setSelectedOption(\"\"),\n\n    dpDesdeConsulta.setValue(\n        moment().subtract(30, 'days').startOf('day').add(1, 'second')\n    ),\n\n    dpHastaConsulta.setValue(\n        moment().endOf('day')\n    )\n\n]).then(() => {\n\n    BuscarFC.run();\n\n    showAlert(\n        \"Filtros limpiados\",\n        \"success\"\n    );\n\n});\n}}",
+  "onClick": "{{\nPromise.all([\n\n    inpIDFactura.setValue(\"\"),\n\n    selProyectoConsulta.setSelectedOption(\"\"),\n    selSuplidorConsulta.setSelectedOption(\"\"),\n    selEstadoConsulta.setSelectedOption(\"\"),\n\n    dpDesdeConsulta.setValue(\n        moment().subtract(90, 'days').startOf('day').add(1, 'second')\n    ),\n\n    dpHastaConsulta.setValue(\n        moment().endOf('day')\n    )\n\n]).then(() => {\n\n    BuscarFC.run();\n\n    showAlert(\n        \"Filtros limpiados\",\n        \"success\"\n    );\n\n});\n}}",
   "parentColumnSpace": 19.625,
   "parentId": "zj1i7dbkt8",
   "parentRowSpace": 10,
